@@ -31,5 +31,11 @@ namespace FlightManager
             this.flightsTableAdapter.Fill(this.fM_DataDataSet.Flights);
 
         }
+
+        private void button_Alternative_Click(object sender, EventArgs e)
+        {
+            FlightsFormAlternative alternative = new FlightsFormAlternative(this);
+            alternative.Show();
+        }
     }
 }

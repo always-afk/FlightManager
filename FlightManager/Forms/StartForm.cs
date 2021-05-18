@@ -12,15 +12,25 @@ namespace FlightManager
 {
     public partial class StartForm : Form
     {
+        bool airports, clients, flights, planes, sales;
         public StartForm()
         {
             InitializeComponent();
+
+            airports = false;
+            clients = false;
+            flights = false;
+            planes = false;
+            sales = false;
         }
 
         private void button_Airports_Click(object sender, EventArgs e)
         {
-            AirportsForm f = new AirportsForm(this);
-            f.Show();
+            if (airports)
+            {
+                AirportsForm f = new AirportsForm();
+                f.Show();
+            }           
         }
 
         private void button_Clients_Click(object sender, EventArgs e)

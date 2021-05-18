@@ -46,59 +46,104 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientsForm.cs">
+    <Compile Include="AlternativeForms\AirportsFormAlternative.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientsForm.Designer.cs">
+    <Compile Include="AlternativeForms\AirportsFormAlternative.Designer.cs">
+      <DependentUpon>AirportsFormAlternative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlternativeForms\ClientsFormAlternative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlternativeForms\ClientsFormAlternative.Designer.cs">
+      <DependentUpon>ClientsFormAlternative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlternativeForms\PlanesFormAlternative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlternativeForms\PlanesFormAlternative.Designer.cs">
+      <DependentUpon>PlanesFormAlternative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlternativeForms\SalesMagazineFormAlternative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlternativeForms\SalesMagazineFormAlternative.Designer.cs">
+      <DependentUpon>SalesMagazineFormAlternative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientsForm.Designer.cs">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FlightsForm.cs">
+    <Compile Include="Forms\FlightsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FlightsForm.Designer.cs">
+    <Compile Include="Forms\FlightsForm.Designer.cs">
       <DependentUpon>FlightsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlternativeForms\FlightsFormAlternative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlternativeForms\FlightsFormAlternative.Designer.cs">
+      <DependentUpon>FlightsFormAlternative.cs</DependentUpon>
     </Compile>
     <Compile Include="FM_DataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FM_DataDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AirportsForm.cs">
+    <Compile Include="Forms\AirportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AirportsForm.Designer.cs">
+    <Compile Include="Forms\AirportsForm.Designer.cs">
       <DependentUpon>AirportsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlanesForm.cs">
+    <Compile Include="Forms\PlanesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlanesForm.Designer.cs">
+    <Compile Include="Forms\PlanesForm.Designer.cs">
       <DependentUpon>PlanesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalesMagazineForm.cs">
+    <Compile Include="Forms\SalesMagazineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesMagazineForm.Designer.cs">
+    <Compile Include="Forms\SalesMagazineForm.Designer.cs">
       <DependentUpon>SalesMagazineForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm.cs">
+    <Compile Include="Forms\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
+    <Compile Include="Forms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AirportsForm.resx">
+    <EmbeddedResource Include="AlternativeForms\ClientsFormAlternative.resx">
+      <DependentUpon>ClientsFormAlternative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlternativeForms\PlanesFormAlternative.resx">
+      <DependentUpon>PlanesFormAlternative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlternativeForms\SalesMagazineFormAlternative.resx">
+      <DependentUpon>SalesMagazineFormAlternative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AirportsForm.resx">
       <DependentUpon>AirportsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientsForm.resx">
+    <EmbeddedResource Include="AlternativeForms\AirportsFormAlternative.resx">
+      <DependentUpon>AirportsFormAlternative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FlightsForm.resx">
+    <EmbeddedResource Include="Forms\FlightsForm.resx">
       <DependentUpon>FlightsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlanesForm.resx">
+    <EmbeddedResource Include="AlternativeForms\FlightsFormAlternative.resx">
+      <DependentUpon>FlightsFormAlternative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlanesForm.resx">
       <DependentUpon>PlanesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -110,10 +155,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SalesMagazineForm.resx">
+    <EmbeddedResource Include="Forms\SalesMagazineForm.resx">
       <DependentUpon>SalesMagazineForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm.resx">
+    <EmbeddedResource Include="Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FM_DataDataSet.xsc">

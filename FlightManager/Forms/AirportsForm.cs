@@ -12,12 +12,9 @@ namespace FlightManager
 {
     public partial class AirportsForm : Form
     {
-        Form f;
-        public AirportsForm(Form f)
+        public AirportsForm()
         {
             InitializeComponent();
-
-            this.f = f;
         }
 
         private void airportsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -33,6 +30,12 @@ namespace FlightManager
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Airports". При необходимости она может быть перемещена или удалена.
             this.airportsTableAdapter.Fill(this.fM_DataDataSet.Airports);
 
+        }
+
+        private void button_Alternative_Click(object sender, EventArgs e)
+        {
+            AirportsFormAlternative form2 = new AirportsFormAlternative(this);
+            form2.Show();
         }
     }
 }
