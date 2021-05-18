@@ -26,11 +26,9 @@ namespace FlightManager
 
         private void button_Airports_Click(object sender, EventArgs e)
         {
-            if (airports)
-            {
-                AirportsForm f = new AirportsForm();
-                f.Show();
-            }           
+            AirportsForm f = new AirportsForm();
+            f.Show();
+                    
         }
 
         private void button_Clients_Click(object sender, EventArgs e)
