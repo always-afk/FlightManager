@@ -52,9 +52,6 @@ namespace FlightManager
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.flightsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idAirportFromTextBox = new System.Windows.Forms.TextBox();
-            this.idAirportToTextBox = new System.Windows.Forms.TextBox();
-            this.idPlaneTextBox = new System.Windows.Forms.TextBox();
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.button_First = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
@@ -63,6 +60,14 @@ namespace FlightManager
             this.button_Last = new System.Windows.Forms.Button();
             this.button_Next = new System.Windows.Forms.Button();
             this.button_Previous = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.airportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.planesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.airportsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.AirportsTableAdapter();
+            this.planesTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.PlanesTableAdapter();
+            this.airportsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             idAirportFromLabel = new System.Windows.Forms.Label();
             idAirportToLabel = new System.Windows.Forms.Label();
             idPlaneLabel = new System.Windows.Forms.Label();
@@ -71,6 +76,9 @@ namespace FlightManager
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).BeginInit();
             this.flightsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // idAirportFromLabel
@@ -258,30 +266,6 @@ namespace FlightManager
             this.flightsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.flightsBindingNavigatorSaveItem.Click += new System.EventHandler(this.flightsBindingNavigatorSaveItem_Click_4);
             // 
-            // idAirportFromTextBox
-            // 
-            this.idAirportFromTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "IdAirportFrom", true));
-            this.idAirportFromTextBox.Location = new System.Drawing.Point(96, 58);
-            this.idAirportFromTextBox.Name = "idAirportFromTextBox";
-            this.idAirportFromTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idAirportFromTextBox.TabIndex = 4;
-            // 
-            // idAirportToTextBox
-            // 
-            this.idAirportToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "IdAirportTo", true));
-            this.idAirportToTextBox.Location = new System.Drawing.Point(96, 84);
-            this.idAirportToTextBox.Name = "idAirportToTextBox";
-            this.idAirportToTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idAirportToTextBox.TabIndex = 6;
-            // 
-            // idPlaneTextBox
-            // 
-            this.idPlaneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "IdPlane", true));
-            this.idPlaneTextBox.Location = new System.Drawing.Point(96, 110);
-            this.idPlaneTextBox.Name = "idPlaneTextBox";
-            this.idPlaneTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idPlaneTextBox.TabIndex = 8;
-            // 
             // priceTextBox
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.flightsBindingSource, "Price", true));
@@ -360,11 +344,73 @@ namespace FlightManager
             this.button_Previous.UseVisualStyleBackColor = true;
             this.button_Previous.Click += new System.EventHandler(this.button_Previous_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdAirportFrom", true));
+            this.comboBox1.DataSource = this.airportsBindingSource;
+            this.comboBox1.DisplayMember = "IATA";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(96, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 21;
+            this.comboBox1.ValueMember = "Id";
+            // 
+            // airportsBindingSource
+            // 
+            this.airportsBindingSource.DataMember = "Airports";
+            this.airportsBindingSource.DataSource = this.fM_DataDataSet;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdAirportTo", true));
+            this.comboBox2.DataSource = this.airportsBindingSource1;
+            this.comboBox2.DisplayMember = "IATA";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(96, 84);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 22;
+            this.comboBox2.ValueMember = "Id";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdPlane", true));
+            this.comboBox3.DataSource = this.planesBindingSource;
+            this.comboBox3.DisplayMember = "Model";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(96, 110);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 23;
+            this.comboBox3.ValueMember = "Id";
+            // 
+            // planesBindingSource
+            // 
+            this.planesBindingSource.DataMember = "Planes";
+            this.planesBindingSource.DataSource = this.fM_DataDataSet;
+            // 
+            // airportsTableAdapter
+            // 
+            this.airportsTableAdapter.ClearBeforeFill = true;
+            // 
+            // planesTableAdapter
+            // 
+            this.planesTableAdapter.ClearBeforeFill = true;
+            // 
+            // airportsBindingSource1
+            // 
+            this.airportsBindingSource1.DataMember = "Airports";
+            this.airportsBindingSource1.DataSource = this.fM_DataDataSet;
+            // 
             // FlightsFormAlternative
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 244);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button_First);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Delete);
@@ -373,11 +419,8 @@ namespace FlightManager
             this.Controls.Add(this.button_Next);
             this.Controls.Add(this.button_Previous);
             this.Controls.Add(idAirportFromLabel);
-            this.Controls.Add(this.idAirportFromTextBox);
             this.Controls.Add(idAirportToLabel);
-            this.Controls.Add(this.idAirportToTextBox);
             this.Controls.Add(idPlaneLabel);
-            this.Controls.Add(this.idPlaneTextBox);
             this.Controls.Add(priceLabel);
             this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.flightsBindingNavigator);
@@ -390,6 +433,9 @@ namespace FlightManager
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).EndInit();
             this.flightsBindingNavigator.ResumeLayout(false);
             this.flightsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,9 +460,6 @@ namespace FlightManager
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton flightsBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox idAirportFromTextBox;
-        private System.Windows.Forms.TextBox idAirportToTextBox;
-        private System.Windows.Forms.TextBox idPlaneTextBox;
         private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.Button button_First;
         private System.Windows.Forms.Button button_Save;
@@ -425,5 +468,13 @@ namespace FlightManager
         private System.Windows.Forms.Button button_Last;
         private System.Windows.Forms.Button button_Next;
         private System.Windows.Forms.Button button_Previous;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.BindingSource airportsBindingSource;
+        private FM_DataDataSetTableAdapters.AirportsTableAdapter airportsTableAdapter;
+        private System.Windows.Forms.BindingSource planesBindingSource;
+        private FM_DataDataSetTableAdapters.PlanesTableAdapter planesTableAdapter;
+        private System.Windows.Forms.BindingSource airportsBindingSource1;
     }
 }

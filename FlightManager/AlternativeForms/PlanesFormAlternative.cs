@@ -12,9 +12,11 @@ namespace FlightManager.AlternativeForms
 {
     public partial class PlanesFormAlternative : Form
     {
-        public PlanesFormAlternative()
+        Form Form;
+        public PlanesFormAlternative(Form form)
         {
             InitializeComponent();
+            Form = form;
         }
 
         private void planesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace FlightManager.AlternativeForms
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Planes". При необходимости она может быть перемещена или удалена.
             this.planesTableAdapter.Fill(this.fM_DataDataSet.Planes);
-
+            Form.Visible = false;
         }
 
         private void button_Previous_Click(object sender, EventArgs e)
@@ -66,6 +68,11 @@ namespace FlightManager.AlternativeForms
         {
             planesBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(fM_DataDataSet);
+        }
+
+        private void PlanesFormAlternative_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form.Visible = false;
         }
     }
 }

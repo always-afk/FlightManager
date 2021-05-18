@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlightManager.AlternativeForms;
 
 namespace FlightManager
 {
@@ -30,6 +31,12 @@ namespace FlightManager
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Planes". При необходимости она может быть перемещена или удалена.
             this.planesTableAdapter.Fill(this.fM_DataDataSet.Planes);
 
+        }
+
+        private void button_Alternative_Click(object sender, EventArgs e)
+        {
+            PlanesFormAlternative alternative = new PlanesFormAlternative(this);
+            alternative.Show();
         }
     }
 }

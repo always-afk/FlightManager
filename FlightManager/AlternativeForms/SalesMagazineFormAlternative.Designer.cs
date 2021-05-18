@@ -30,30 +30,11 @@ namespace FlightManager.AlternativeForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesMagazineFormAlternative));
             System.Windows.Forms.Label idClientLabel;
             System.Windows.Forms.Label idFlightLabel;
+            System.Windows.Forms.Label dateSaleLabel;
             System.Windows.Forms.Label dateFlightLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesMagazineFormAlternative));
-            this.fM_DataDataSet = new FlightManager.FM_DataDataSet();
-            this.salesMagazineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesMagazineTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.SalesMagazineTableAdapter();
-            this.tableAdapterManager = new FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager();
-            this.salesMagazineBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.salesMagazineBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idClientTextBox = new System.Windows.Forms.TextBox();
-            this.idFlightTextBox = new System.Windows.Forms.TextBox();
-            this.dateFlightDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.button_First = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Delete = new System.Windows.Forms.Button();
@@ -61,214 +42,42 @@ namespace FlightManager.AlternativeForms
             this.button_Last = new System.Windows.Forms.Button();
             this.button_Next = new System.Windows.Forms.Button();
             this.button_Previous = new System.Windows.Forms.Button();
+            this.fM_DataDataSet = new FlightManager.FM_DataDataSet();
+            this.salesMagazineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesMagazineTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.SalesMagazineTableAdapter();
+            this.tableAdapterManager = new FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager();
+            this.salesMagazineBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.salesMagazineBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.dateSaleDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateFlightDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.ClientsTableAdapter();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.flightsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.FlightsTableAdapter();
             idClientLabel = new System.Windows.Forms.Label();
             idFlightLabel = new System.Windows.Forms.Label();
+            dateSaleLabel = new System.Windows.Forms.Label();
             dateFlightLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineBindingNavigator)).BeginInit();
             this.salesMagazineBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // idClientLabel
-            // 
-            idClientLabel.AutoSize = true;
-            idClientLabel.Location = new System.Drawing.Point(20, 70);
-            idClientLabel.Name = "idClientLabel";
-            idClientLabel.Size = new System.Drawing.Size(48, 13);
-            idClientLabel.TabIndex = 3;
-            idClientLabel.Text = "Id Client:";
-            // 
-            // idFlightLabel
-            // 
-            idFlightLabel.AutoSize = true;
-            idFlightLabel.Location = new System.Drawing.Point(20, 96);
-            idFlightLabel.Name = "idFlightLabel";
-            idFlightLabel.Size = new System.Drawing.Size(47, 13);
-            idFlightLabel.TabIndex = 5;
-            idFlightLabel.Text = "Id Flight:";
-            // 
-            // dateFlightLabel
-            // 
-            dateFlightLabel.AutoSize = true;
-            dateFlightLabel.Location = new System.Drawing.Point(20, 123);
-            dateFlightLabel.Name = "dateFlightLabel";
-            dateFlightLabel.Size = new System.Drawing.Size(61, 13);
-            dateFlightLabel.TabIndex = 9;
-            dateFlightLabel.Text = "Date Flight:";
-            // 
-            // fM_DataDataSet
-            // 
-            this.fM_DataDataSet.DataSetName = "FM_DataDataSet";
-            this.fM_DataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salesMagazineBindingSource
-            // 
-            this.salesMagazineBindingSource.DataMember = "SalesMagazine";
-            this.salesMagazineBindingSource.DataSource = this.fM_DataDataSet;
-            // 
-            // salesMagazineTableAdapter
-            // 
-            this.salesMagazineTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AirportsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientsTableAdapter = null;
-            this.tableAdapterManager.FlightsTableAdapter = null;
-            this.tableAdapterManager.PlanesTableAdapter = null;
-            this.tableAdapterManager.SalesMagazineTableAdapter = this.salesMagazineTableAdapter;
-            this.tableAdapterManager.UpdateOrder = FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // salesMagazineBindingNavigator
-            // 
-            this.salesMagazineBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.salesMagazineBindingNavigator.BindingSource = this.salesMagazineBindingSource;
-            this.salesMagazineBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.salesMagazineBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.salesMagazineBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.salesMagazineBindingNavigatorSaveItem});
-            this.salesMagazineBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.salesMagazineBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.salesMagazineBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.salesMagazineBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.salesMagazineBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.salesMagazineBindingNavigator.Name = "salesMagazineBindingNavigator";
-            this.salesMagazineBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.salesMagazineBindingNavigator.Size = new System.Drawing.Size(373, 25);
-            this.salesMagazineBindingNavigator.TabIndex = 0;
-            this.salesMagazineBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // salesMagazineBindingNavigatorSaveItem
-            // 
-            this.salesMagazineBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.salesMagazineBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesMagazineBindingNavigatorSaveItem.Image")));
-            this.salesMagazineBindingNavigatorSaveItem.Name = "salesMagazineBindingNavigatorSaveItem";
-            this.salesMagazineBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.salesMagazineBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.salesMagazineBindingNavigatorSaveItem.Click += new System.EventHandler(this.salesMagazineBindingNavigatorSaveItem_Click);
-            // 
-            // idClientTextBox
-            // 
-            this.idClientTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salesMagazineBindingSource, "IdClient", true));
-            this.idClientTextBox.Location = new System.Drawing.Point(87, 67);
-            this.idClientTextBox.Name = "idClientTextBox";
-            this.idClientTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idClientTextBox.TabIndex = 4;
-            // 
-            // idFlightTextBox
-            // 
-            this.idFlightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.salesMagazineBindingSource, "IdFlight", true));
-            this.idFlightTextBox.Location = new System.Drawing.Point(87, 93);
-            this.idFlightTextBox.Name = "idFlightTextBox";
-            this.idFlightTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idFlightTextBox.TabIndex = 6;
-            // 
-            // dateFlightDateTimePicker
-            // 
-            this.dateFlightDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.salesMagazineBindingSource, "DateFlight", true));
-            this.dateFlightDateTimePicker.Location = new System.Drawing.Point(87, 119);
-            this.dateFlightDateTimePicker.Name = "dateFlightDateTimePicker";
-            this.dateFlightDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dateFlightDateTimePicker.TabIndex = 10;
             // 
             // button_First
             // 
@@ -340,11 +149,262 @@ namespace FlightManager.AlternativeForms
             this.button_Previous.UseVisualStyleBackColor = true;
             this.button_Previous.Click += new System.EventHandler(this.button_Previous_Click);
             // 
+            // fM_DataDataSet
+            // 
+            this.fM_DataDataSet.DataSetName = "FM_DataDataSet";
+            this.fM_DataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // salesMagazineBindingSource
+            // 
+            this.salesMagazineBindingSource.DataMember = "SalesMagazine";
+            this.salesMagazineBindingSource.DataSource = this.fM_DataDataSet;
+            // 
+            // salesMagazineTableAdapter
+            // 
+            this.salesMagazineTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AirportsTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientsTableAdapter = this.clientsTableAdapter;
+            this.tableAdapterManager.FlightsTableAdapter = this.flightsTableAdapter;
+            this.tableAdapterManager.PlanesTableAdapter = null;
+            this.tableAdapterManager.SalesMagazineTableAdapter = this.salesMagazineTableAdapter;
+            this.tableAdapterManager.UpdateOrder = FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // salesMagazineBindingNavigator
+            // 
+            this.salesMagazineBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.salesMagazineBindingNavigator.BindingSource = this.salesMagazineBindingSource;
+            this.salesMagazineBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.salesMagazineBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.salesMagazineBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.salesMagazineBindingNavigatorSaveItem});
+            this.salesMagazineBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.salesMagazineBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.salesMagazineBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.salesMagazineBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.salesMagazineBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.salesMagazineBindingNavigator.Name = "salesMagazineBindingNavigator";
+            this.salesMagazineBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.salesMagazineBindingNavigator.Size = new System.Drawing.Size(373, 25);
+            this.salesMagazineBindingNavigator.TabIndex = 42;
+            this.salesMagazineBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // salesMagazineBindingNavigatorSaveItem
+            // 
+            this.salesMagazineBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.salesMagazineBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesMagazineBindingNavigatorSaveItem.Image")));
+            this.salesMagazineBindingNavigatorSaveItem.Name = "salesMagazineBindingNavigatorSaveItem";
+            this.salesMagazineBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.salesMagazineBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.salesMagazineBindingNavigatorSaveItem.Click += new System.EventHandler(this.salesMagazineBindingNavigatorSaveItem_Click_1);
+            // 
+            // idClientLabel
+            // 
+            idClientLabel.AutoSize = true;
+            idClientLabel.Location = new System.Drawing.Point(22, 39);
+            idClientLabel.Name = "idClientLabel";
+            idClientLabel.Size = new System.Drawing.Size(48, 13);
+            idClientLabel.TabIndex = 44;
+            idClientLabel.Text = "Id Client:";
+            // 
+            // idFlightLabel
+            // 
+            idFlightLabel.AutoSize = true;
+            idFlightLabel.Location = new System.Drawing.Point(22, 65);
+            idFlightLabel.Name = "idFlightLabel";
+            idFlightLabel.Size = new System.Drawing.Size(47, 13);
+            idFlightLabel.TabIndex = 46;
+            idFlightLabel.Text = "Id Flight:";
+            // 
+            // dateSaleLabel
+            // 
+            dateSaleLabel.AutoSize = true;
+            dateSaleLabel.Location = new System.Drawing.Point(22, 92);
+            dateSaleLabel.Name = "dateSaleLabel";
+            dateSaleLabel.Size = new System.Drawing.Size(57, 13);
+            dateSaleLabel.TabIndex = 48;
+            dateSaleLabel.Text = "Date Sale:";
+            // 
+            // dateSaleDateTimePicker
+            // 
+            this.dateSaleDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.salesMagazineBindingSource, "DateSale", true));
+            this.dateSaleDateTimePicker.Location = new System.Drawing.Point(89, 88);
+            this.dateSaleDateTimePicker.Name = "dateSaleDateTimePicker";
+            this.dateSaleDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateSaleDateTimePicker.TabIndex = 49;
+            // 
+            // dateFlightLabel
+            // 
+            dateFlightLabel.AutoSize = true;
+            dateFlightLabel.Location = new System.Drawing.Point(22, 118);
+            dateFlightLabel.Name = "dateFlightLabel";
+            dateFlightLabel.Size = new System.Drawing.Size(61, 13);
+            dateFlightLabel.TabIndex = 50;
+            dateFlightLabel.Text = "Date Flight:";
+            // 
+            // dateFlightDateTimePicker
+            // 
+            this.dateFlightDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.salesMagazineBindingSource, "DateFlight", true));
+            this.dateFlightDateTimePicker.Location = new System.Drawing.Point(89, 114);
+            this.dateFlightDateTimePicker.Name = "dateFlightDateTimePicker";
+            this.dateFlightDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateFlightDateTimePicker.TabIndex = 51;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salesMagazineBindingSource, "IdClient", true));
+            this.comboBox1.DataSource = this.clientsBindingSource;
+            this.comboBox1.DisplayMember = "PassportId";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(89, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 52;
+            this.comboBox1.ValueMember = "Id";
+            // 
+            // clientsBindingSource
+            // 
+            this.clientsBindingSource.DataMember = "Clients";
+            this.clientsBindingSource.DataSource = this.fM_DataDataSet;
+            // 
+            // clientsTableAdapter
+            // 
+            this.clientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salesMagazineBindingSource, "IdFlight", true));
+            this.comboBox2.DataSource = this.flightsBindingSource;
+            this.comboBox2.DisplayMember = "Price";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(89, 62);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 53;
+            this.comboBox2.ValueMember = "Id";
+            // 
+            // flightsBindingSource
+            // 
+            this.flightsBindingSource.DataMember = "Flights";
+            this.flightsBindingSource.DataSource = this.fM_DataDataSet;
+            // 
+            // flightsTableAdapter
+            // 
+            this.flightsTableAdapter.ClearBeforeFill = true;
+            // 
             // SalesMagazineFormAlternative
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 231);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(idClientLabel);
+            this.Controls.Add(idFlightLabel);
+            this.Controls.Add(dateSaleLabel);
+            this.Controls.Add(this.dateSaleDateTimePicker);
+            this.Controls.Add(dateFlightLabel);
+            this.Controls.Add(this.dateFlightDateTimePicker);
+            this.Controls.Add(this.salesMagazineBindingNavigator);
             this.Controls.Add(this.button_First);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Delete);
@@ -352,13 +412,6 @@ namespace FlightManager.AlternativeForms
             this.Controls.Add(this.button_Last);
             this.Controls.Add(this.button_Next);
             this.Controls.Add(this.button_Previous);
-            this.Controls.Add(idClientLabel);
-            this.Controls.Add(this.idClientTextBox);
-            this.Controls.Add(idFlightLabel);
-            this.Controls.Add(this.idFlightTextBox);
-            this.Controls.Add(dateFlightLabel);
-            this.Controls.Add(this.dateFlightDateTimePicker);
-            this.Controls.Add(this.salesMagazineBindingNavigator);
             this.Name = "SalesMagazineFormAlternative";
             this.Text = "SalesMagazineFormAlternative";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SalesMagazineFormAlternative_FormClosed);
@@ -368,13 +421,21 @@ namespace FlightManager.AlternativeForms
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineBindingNavigator)).EndInit();
             this.salesMagazineBindingNavigator.ResumeLayout(false);
             this.salesMagazineBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button button_First;
+        private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.Button button_Delete;
+        private System.Windows.Forms.Button button_Add;
+        private System.Windows.Forms.Button button_Last;
+        private System.Windows.Forms.Button button_Next;
+        private System.Windows.Forms.Button button_Previous;
         private FM_DataDataSet fM_DataDataSet;
         private System.Windows.Forms.BindingSource salesMagazineBindingSource;
         private FM_DataDataSetTableAdapters.SalesMagazineTableAdapter salesMagazineTableAdapter;
@@ -392,15 +453,13 @@ namespace FlightManager.AlternativeForms
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton salesMagazineBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox idClientTextBox;
-        private System.Windows.Forms.TextBox idFlightTextBox;
+        private FM_DataDataSetTableAdapters.ClientsTableAdapter clientsTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateSaleDateTimePicker;
         private System.Windows.Forms.DateTimePicker dateFlightDateTimePicker;
-        private System.Windows.Forms.Button button_First;
-        private System.Windows.Forms.Button button_Save;
-        private System.Windows.Forms.Button button_Delete;
-        private System.Windows.Forms.Button button_Add;
-        private System.Windows.Forms.Button button_Last;
-        private System.Windows.Forms.Button button_Next;
-        private System.Windows.Forms.Button button_Previous;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource clientsBindingSource;
+        private FM_DataDataSetTableAdapters.FlightsTableAdapter flightsTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.BindingSource flightsBindingSource;
     }
 }

@@ -21,6 +21,14 @@ namespace FlightManager
 
         private void FlightsFormAlternative_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Planes". При необходимости она может быть перемещена или удалена.
+            this.planesTableAdapter.Fill(this.fM_DataDataSet.Planes);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Airports". При необходимости она может быть перемещена или удалена.
+            this.airportsTableAdapter.Fill(this.fM_DataDataSet.Airports);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Planes". При необходимости она может быть перемещена или удалена.
+            this.planesTableAdapter.Fill(this.fM_DataDataSet.Planes);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Airports". При необходимости она может быть перемещена или удалена.
+            this.airportsTableAdapter.Fill(this.fM_DataDataSet.Airports);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Flights". При необходимости она может быть перемещена или удалена.
             this.flightsTableAdapter.Fill(this.fM_DataDataSet.Flights);
             Form.Visible = false;

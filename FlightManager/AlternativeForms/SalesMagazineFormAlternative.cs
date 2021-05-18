@@ -29,6 +29,12 @@ namespace FlightManager.AlternativeForms
 
         private void SalesMagazineFormAlternative_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Flights". При необходимости она может быть перемещена или удалена.
+            this.flightsTableAdapter.Fill(this.fM_DataDataSet.Flights);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Clients". При необходимости она может быть перемещена или удалена.
+            this.clientsTableAdapter.Fill(this.fM_DataDataSet.Clients);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.SalesMagazine". При необходимости она может быть перемещена или удалена.
+            this.salesMagazineTableAdapter.Fill(this.fM_DataDataSet.SalesMagazine);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.SalesMagazine". При необходимости она может быть перемещена или удалена.
             this.salesMagazineTableAdapter.Fill(this.fM_DataDataSet.SalesMagazine);
 
@@ -74,6 +80,14 @@ namespace FlightManager.AlternativeForms
         private void SalesMagazineFormAlternative_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form.Visible = true;
+        }
+
+        private void salesMagazineBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.salesMagazineBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.fM_DataDataSet);
+
         }
     }
 }

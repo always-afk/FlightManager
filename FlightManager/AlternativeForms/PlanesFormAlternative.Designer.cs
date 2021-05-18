@@ -30,25 +30,25 @@ namespace FlightManager.AlternativeForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlanesFormAlternative));
             System.Windows.Forms.Label modelLabel;
             System.Windows.Forms.Label numOfSeatsLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlanesFormAlternative));
             this.fM_DataDataSet = new FlightManager.FM_DataDataSet();
             this.planesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.planesTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.PlanesTableAdapter();
             this.tableAdapterManager = new FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager();
             this.planesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.planesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.modelTextBox = new System.Windows.Forms.TextBox();
             this.numOfSeatsTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +66,24 @@ namespace FlightManager.AlternativeForms
             ((System.ComponentModel.ISupportInitialize)(this.planesBindingNavigator)).BeginInit();
             this.planesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // modelLabel
+            // 
+            modelLabel.AutoSize = true;
+            modelLabel.Location = new System.Drawing.Point(16, 47);
+            modelLabel.Name = "modelLabel";
+            modelLabel.Size = new System.Drawing.Size(39, 13);
+            modelLabel.TabIndex = 3;
+            modelLabel.Text = "Model:";
+            // 
+            // numOfSeatsLabel
+            // 
+            numOfSeatsLabel.AutoSize = true;
+            numOfSeatsLabel.Location = new System.Drawing.Point(16, 73);
+            numOfSeatsLabel.Name = "numOfSeatsLabel";
+            numOfSeatsLabel.Size = new System.Drawing.Size(76, 13);
+            numOfSeatsLabel.TabIndex = 5;
+            numOfSeatsLabel.Text = "Num Of Seats:";
             // 
             // fM_DataDataSet
             // 
@@ -121,6 +139,31 @@ namespace FlightManager.AlternativeForms
             this.planesBindingNavigator.TabIndex = 0;
             this.planesBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -148,22 +191,16 @@ namespace FlightManager.AlternativeForms
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -171,7 +208,7 @@ namespace FlightManager.AlternativeForms
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -180,49 +217,22 @@ namespace FlightManager.AlternativeForms
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // planesBindingNavigatorSaveItem
             // 
             this.planesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.planesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("planesBindingNavigatorSaveItem.Image")));
             this.planesBindingNavigatorSaveItem.Name = "planesBindingNavigatorSaveItem";
-            this.planesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.planesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.planesBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.planesBindingNavigatorSaveItem.Click += new System.EventHandler(this.planesBindingNavigatorSaveItem_Click);
-            // 
-            // modelLabel
-            // 
-            modelLabel.AutoSize = true;
-            modelLabel.Location = new System.Drawing.Point(16, 47);
-            modelLabel.Name = "modelLabel";
-            modelLabel.Size = new System.Drawing.Size(39, 13);
-            modelLabel.TabIndex = 3;
-            modelLabel.Text = "Model:";
             // 
             // modelTextBox
             // 
@@ -231,15 +241,6 @@ namespace FlightManager.AlternativeForms
             this.modelTextBox.Name = "modelTextBox";
             this.modelTextBox.Size = new System.Drawing.Size(104, 20);
             this.modelTextBox.TabIndex = 4;
-            // 
-            // numOfSeatsLabel
-            // 
-            numOfSeatsLabel.AutoSize = true;
-            numOfSeatsLabel.Location = new System.Drawing.Point(16, 73);
-            numOfSeatsLabel.Name = "numOfSeatsLabel";
-            numOfSeatsLabel.Size = new System.Drawing.Size(76, 13);
-            numOfSeatsLabel.TabIndex = 5;
-            numOfSeatsLabel.Text = "Num Of Seats:";
             // 
             // numOfSeatsTextBox
             // 
@@ -338,6 +339,7 @@ namespace FlightManager.AlternativeForms
             this.Controls.Add(this.planesBindingNavigator);
             this.Name = "PlanesFormAlternative";
             this.Text = "PlanesFormAlternative";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PlanesFormAlternative_FormClosed);
             this.Load += new System.EventHandler(this.PlanesFormAlternative_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
