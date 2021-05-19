@@ -1,5 +1,5 @@
 ﻿
-namespace FlightManager.AlternativeForms
+namespace FlightManager
 {
     partial class ClientsFormAlternative
     {

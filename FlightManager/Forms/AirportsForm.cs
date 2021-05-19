@@ -34,8 +34,7 @@ namespace FlightManager
 
         private void button_Alternative_Click(object sender, EventArgs e)
         {
-            AirportsFormAlternative form2 = new AirportsFormAlternative(this);
-            form2.Show();
+            FormOpener.ShowForm<AirportsFormAlternative>();
         }
     }
 }

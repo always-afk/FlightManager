@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FlightManager.AlternativeForms
+namespace FlightManager
 {
     public partial class SalesMagazineFormAlternative : Form
     {
-        Form Form;
-        public SalesMagazineFormAlternative(Form form)
+        public SalesMagazineFormAlternative()
         {
             InitializeComponent();
-            Form = form;
         }
 
         private void salesMagazineBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,8 +35,6 @@ namespace FlightManager.AlternativeForms
             this.salesMagazineTableAdapter.Fill(this.fM_DataDataSet.SalesMagazine);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.SalesMagazine". При необходимости она может быть перемещена или удалена.
             this.salesMagazineTableAdapter.Fill(this.fM_DataDataSet.SalesMagazine);
-
-            Form.Visible = false;
         }
 
         private void button_Previous_Click(object sender, EventArgs e)
@@ -79,7 +75,6 @@ namespace FlightManager.AlternativeForms
 
         private void SalesMagazineFormAlternative_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form.Visible = true;
         }
 
         private void salesMagazineBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)

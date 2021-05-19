@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FlightManager.AlternativeForms
+namespace FlightManager
 {
     public partial class ClientsFormAlternative : Form
     {
-        Form Form;
-        public ClientsFormAlternative(Form form)
+        public ClientsFormAlternative()
         {
             InitializeComponent();
-            Form = form;
         }
 
         private void clientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -31,7 +29,6 @@ namespace FlightManager.AlternativeForms
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "fM_DataDataSet.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.fM_DataDataSet.Clients);
-            Form.Visible = false;
         }
 
         private void button_Previous_Click(object sender, EventArgs e)
@@ -72,7 +69,6 @@ namespace FlightManager.AlternativeForms
 
         private void ClientsFormAlternative_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form.Visible = true;
         }
     }
 }

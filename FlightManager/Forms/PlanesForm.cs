@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FlightManager.AlternativeForms;
 
 namespace FlightManager
 {
@@ -35,8 +34,7 @@ namespace FlightManager
 
         private void button_Alternative_Click(object sender, EventArgs e)
         {
-            PlanesFormAlternative alternative = new PlanesFormAlternative(this);
-            alternative.Show();
+            FormOpener.ShowForm<PlanesFormAlternative>();
         }
     }
 }

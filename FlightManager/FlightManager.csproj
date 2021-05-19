@@ -70,6 +70,7 @@
     <Compile Include="AlternativeForms\SalesMagazineFormAlternative.Designer.cs">
       <DependentUpon>SalesMagazineFormAlternative.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOpener.cs" />
     <Compile Include="Forms\ClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
