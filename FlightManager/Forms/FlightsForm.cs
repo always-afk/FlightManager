@@ -36,5 +36,20 @@ namespace FlightManager
         {
             FormOpener.ShowForm<FlightsFormAlternative>();
         }
+
+        private void button_Airports_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<AirportsForm>();
+        }
+
+        private void button_Planes_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<PlanesForm>();
+        }
+
+        private void FlightsForm_Activated(object sender, EventArgs e)
+        {
+            this.flightsTableAdapter.Fill(this.fM_DataDataSet.Flights);
+        }
     }
 }

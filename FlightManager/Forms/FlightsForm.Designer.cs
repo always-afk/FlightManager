@@ -49,11 +49,13 @@ namespace FlightManager
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.flightsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.flightsDataGridView = new System.Windows.Forms.DataGridView();
-            this.button_Alternative = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_Alternative = new System.Windows.Forms.Button();
+            this.button_Airports = new System.Windows.Forms.Button();
+            this.button_Planes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).BeginInit();
@@ -111,7 +113,7 @@ namespace FlightManager
             this.flightsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.flightsBindingNavigator.Name = "flightsBindingNavigator";
             this.flightsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.flightsBindingNavigator.Size = new System.Drawing.Size(468, 25);
+            this.flightsBindingNavigator.Size = new System.Drawing.Size(551, 25);
             this.flightsBindingNavigator.TabIndex = 0;
             this.flightsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -220,20 +222,10 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.flightsDataGridView.DataSource = this.flightsBindingSource;
-            this.flightsDataGridView.Location = new System.Drawing.Point(12, 79);
+            this.flightsDataGridView.Location = new System.Drawing.Point(12, 30);
             this.flightsDataGridView.Name = "flightsDataGridView";
-            this.flightsDataGridView.Size = new System.Drawing.Size(448, 378);
+            this.flightsDataGridView.Size = new System.Drawing.Size(448, 427);
             this.flightsDataGridView.TabIndex = 1;
-            // 
-            // button_Alternative
-            // 
-            this.button_Alternative.Location = new System.Drawing.Point(316, 1);
-            this.button_Alternative.Name = "button_Alternative";
-            this.button_Alternative.Size = new System.Drawing.Size(75, 23);
-            this.button_Alternative.TabIndex = 2;
-            this.button_Alternative.Text = "Alternative";
-            this.button_Alternative.UseVisualStyleBackColor = true;
-            this.button_Alternative.Click += new System.EventHandler(this.button_Alternative_Click);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -259,16 +251,49 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn5.HeaderText = "Price";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // button_Alternative
+            // 
+            this.button_Alternative.Location = new System.Drawing.Point(316, 1);
+            this.button_Alternative.Name = "button_Alternative";
+            this.button_Alternative.Size = new System.Drawing.Size(75, 23);
+            this.button_Alternative.TabIndex = 2;
+            this.button_Alternative.Text = "Alternative";
+            this.button_Alternative.UseVisualStyleBackColor = true;
+            this.button_Alternative.Click += new System.EventHandler(this.button_Alternative_Click);
+            // 
+            // button_Airports
+            // 
+            this.button_Airports.Location = new System.Drawing.Point(466, 30);
+            this.button_Airports.Name = "button_Airports";
+            this.button_Airports.Size = new System.Drawing.Size(75, 23);
+            this.button_Airports.TabIndex = 3;
+            this.button_Airports.Text = "Airports";
+            this.button_Airports.UseVisualStyleBackColor = true;
+            this.button_Airports.Click += new System.EventHandler(this.button_Airports_Click);
+            // 
+            // button_Planes
+            // 
+            this.button_Planes.Location = new System.Drawing.Point(466, 59);
+            this.button_Planes.Name = "button_Planes";
+            this.button_Planes.Size = new System.Drawing.Size(75, 23);
+            this.button_Planes.TabIndex = 4;
+            this.button_Planes.Text = "Planes";
+            this.button_Planes.UseVisualStyleBackColor = true;
+            this.button_Planes.Click += new System.EventHandler(this.button_Planes_Click);
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 469);
+            this.ClientSize = new System.Drawing.Size(551, 469);
+            this.Controls.Add(this.button_Planes);
+            this.Controls.Add(this.button_Airports);
             this.Controls.Add(this.button_Alternative);
             this.Controls.Add(this.flightsDataGridView);
             this.Controls.Add(this.flightsBindingNavigator);
             this.Name = "FlightsForm";
             this.Text = "FlightsForm";
+            this.Activated += new System.EventHandler(this.FlightsForm_Activated);
             this.Load += new System.EventHandler(this.FlightsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).EndInit();
@@ -306,5 +331,7 @@ namespace FlightManager
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button button_Airports;
+        private System.Windows.Forms.Button button_Planes;
     }
 }

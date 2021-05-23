@@ -435,6 +435,29 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SalesMagazineReportTableAdapter" GeneratorDataComponentClassName="SalesMagazineReportTableAdapter" Name="SalesMagazineReport" UserDataComponentName="SalesMagazineReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FM_DataConnectionString (Settings)" DbObjectName="FM_Data.dbo.SalesMagazineReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Surname, PassportId, AirportFrom, AirportTo, Price, DateSale, DateFlight FROM dbo.SalesMagazineReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="PassportId" DataSetColumn="PassportId" />
+              <Mapping SourceColumn="AirportFrom" DataSetColumn="AirportFrom" />
+              <Mapping SourceColumn="AirportTo" DataSetColumn="AirportTo" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="DateSale" DataSetColumn="DateSale" />
+              <Mapping SourceColumn="DateFlight" DataSetColumn="DateFlight" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="FM_DataConnectionString (Settings)" DbObjectName="FM_Data.dbo.AddAirport" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="AddAirport" MethodsParameterType="CLR" Modifier="Public" Name="AddAirport" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AddAirport">
@@ -480,7 +503,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
   <xs:element name="FM_DataDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FM_DataDataSet" msprop:Generator_UserDSName="FM_DataDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Airports" msprop:Generator_TableClassName="AirportsDataTable" msprop:Generator_TableVarName="tableAirports" msprop:Generator_TablePropName="Airports" msprop:Generator_RowDeletingName="AirportsRowDeleting" msprop:Generator_RowChangingName="AirportsRowChanging" msprop:Generator_RowEvHandlerName="AirportsRowChangeEventHandler" msprop:Generator_RowDeletedName="AirportsRowDeleted" msprop:Generator_UserTableName="Airports" msprop:Generator_RowChangedName="AirportsRowChanged" msprop:Generator_RowEvArgName="AirportsRowChangeEvent" msprop:Generator_RowClassName="AirportsRow">
+        <xs:element name="Airports" msprop:Generator_TableClassName="AirportsDataTable" msprop:Generator_TableVarName="tableAirports" msprop:Generator_RowChangedName="AirportsRowChanged" msprop:Generator_TablePropName="Airports" msprop:Generator_RowDeletingName="AirportsRowDeleting" msprop:Generator_RowChangingName="AirportsRowChanging" msprop:Generator_RowEvHandlerName="AirportsRowChangeEventHandler" msprop:Generator_RowDeletedName="AirportsRowDeleted" msprop:Generator_RowClassName="AirportsRow" msprop:Generator_UserTableName="Airports" msprop:Generator_RowEvArgName="AirportsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -502,7 +525,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Clients" msprop:Generator_TableClassName="ClientsDataTable" msprop:Generator_TableVarName="tableClients" msprop:Generator_TablePropName="Clients" msprop:Generator_RowDeletingName="ClientsRowDeleting" msprop:Generator_RowChangingName="ClientsRowChanging" msprop:Generator_RowEvHandlerName="ClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientsRowDeleted" msprop:Generator_UserTableName="Clients" msprop:Generator_RowChangedName="ClientsRowChanged" msprop:Generator_RowEvArgName="ClientsRowChangeEvent" msprop:Generator_RowClassName="ClientsRow">
+        <xs:element name="Clients" msprop:Generator_TableClassName="ClientsDataTable" msprop:Generator_TableVarName="tableClients" msprop:Generator_RowChangedName="ClientsRowChanged" msprop:Generator_TablePropName="Clients" msprop:Generator_RowDeletingName="ClientsRowDeleting" msprop:Generator_RowChangingName="ClientsRowChanging" msprop:Generator_RowEvHandlerName="ClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientsRowDeleted" msprop:Generator_RowClassName="ClientsRow" msprop:Generator_UserTableName="Clients" msprop:Generator_RowEvArgName="ClientsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -530,7 +553,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Flights" msprop:Generator_TableClassName="FlightsDataTable" msprop:Generator_TableVarName="tableFlights" msprop:Generator_TablePropName="Flights" msprop:Generator_RowDeletingName="FlightsRowDeleting" msprop:Generator_RowChangingName="FlightsRowChanging" msprop:Generator_RowEvHandlerName="FlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="FlightsRowDeleted" msprop:Generator_UserTableName="Flights" msprop:Generator_RowChangedName="FlightsRowChanged" msprop:Generator_RowEvArgName="FlightsRowChangeEvent" msprop:Generator_RowClassName="FlightsRow">
+        <xs:element name="Flights" msprop:Generator_TableClassName="FlightsDataTable" msprop:Generator_TableVarName="tableFlights" msprop:Generator_RowChangedName="FlightsRowChanged" msprop:Generator_TablePropName="Flights" msprop:Generator_RowDeletingName="FlightsRowDeleting" msprop:Generator_RowChangingName="FlightsRowChanging" msprop:Generator_RowEvHandlerName="FlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="FlightsRowDeleted" msprop:Generator_RowClassName="FlightsRow" msprop:Generator_UserTableName="Flights" msprop:Generator_RowEvArgName="FlightsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -541,7 +564,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Planes" msprop:Generator_TableClassName="PlanesDataTable" msprop:Generator_TableVarName="tablePlanes" msprop:Generator_TablePropName="Planes" msprop:Generator_RowDeletingName="PlanesRowDeleting" msprop:Generator_RowChangingName="PlanesRowChanging" msprop:Generator_RowEvHandlerName="PlanesRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanesRowDeleted" msprop:Generator_UserTableName="Planes" msprop:Generator_RowChangedName="PlanesRowChanged" msprop:Generator_RowEvArgName="PlanesRowChangeEvent" msprop:Generator_RowClassName="PlanesRow">
+        <xs:element name="Planes" msprop:Generator_TableClassName="PlanesDataTable" msprop:Generator_TableVarName="tablePlanes" msprop:Generator_RowChangedName="PlanesRowChanged" msprop:Generator_TablePropName="Planes" msprop:Generator_RowDeletingName="PlanesRowDeleting" msprop:Generator_RowChangingName="PlanesRowChanging" msprop:Generator_RowEvHandlerName="PlanesRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanesRowDeleted" msprop:Generator_RowClassName="PlanesRow" msprop:Generator_UserTableName="Planes" msprop:Generator_RowEvArgName="PlanesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -557,7 +580,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SalesMagazine" msprop:Generator_TableClassName="SalesMagazineDataTable" msprop:Generator_TableVarName="tableSalesMagazine" msprop:Generator_TablePropName="SalesMagazine" msprop:Generator_RowDeletingName="SalesMagazineRowDeleting" msprop:Generator_RowChangingName="SalesMagazineRowChanging" msprop:Generator_RowEvHandlerName="SalesMagazineRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesMagazineRowDeleted" msprop:Generator_UserTableName="SalesMagazine" msprop:Generator_RowChangedName="SalesMagazineRowChanged" msprop:Generator_RowEvArgName="SalesMagazineRowChangeEvent" msprop:Generator_RowClassName="SalesMagazineRow">
+        <xs:element name="SalesMagazine" msprop:Generator_TableClassName="SalesMagazineDataTable" msprop:Generator_TableVarName="tableSalesMagazine" msprop:Generator_RowChangedName="SalesMagazineRowChanged" msprop:Generator_TablePropName="SalesMagazine" msprop:Generator_RowDeletingName="SalesMagazineRowDeleting" msprop:Generator_RowChangingName="SalesMagazineRowChanging" msprop:Generator_RowEvHandlerName="SalesMagazineRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesMagazineRowDeleted" msprop:Generator_RowClassName="SalesMagazineRow" msprop:Generator_UserTableName="SalesMagazine" msprop:Generator_RowEvArgName="SalesMagazineRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -568,7 +591,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="InfoFlights" msprop:Generator_TableClassName="InfoFlightsDataTable" msprop:Generator_TableVarName="tableInfoFlights" msprop:Generator_TablePropName="InfoFlights" msprop:Generator_RowDeletingName="InfoFlightsRowDeleting" msprop:Generator_RowChangingName="InfoFlightsRowChanging" msprop:Generator_RowEvHandlerName="InfoFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="InfoFlightsRowDeleted" msprop:Generator_UserTableName="InfoFlights" msprop:Generator_RowChangedName="InfoFlightsRowChanged" msprop:Generator_RowEvArgName="InfoFlightsRowChangeEvent" msprop:Generator_RowClassName="InfoFlightsRow">
+        <xs:element name="InfoFlights" msprop:Generator_TableClassName="InfoFlightsDataTable" msprop:Generator_TableVarName="tableInfoFlights" msprop:Generator_RowChangedName="InfoFlightsRowChanged" msprop:Generator_TablePropName="InfoFlights" msprop:Generator_RowDeletingName="InfoFlightsRowDeleting" msprop:Generator_RowChangingName="InfoFlightsRowChanging" msprop:Generator_RowEvHandlerName="InfoFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="InfoFlightsRowDeleted" msprop:Generator_RowClassName="InfoFlightsRow" msprop:Generator_UserTableName="InfoFlights" msprop:Generator_RowEvArgName="InfoFlightsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -597,7 +620,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SaleInfoClients" msprop:Generator_TableClassName="SaleInfoClientsDataTable" msprop:Generator_TableVarName="tableSaleInfoClients" msprop:Generator_TablePropName="SaleInfoClients" msprop:Generator_RowDeletingName="SaleInfoClientsRowDeleting" msprop:Generator_RowChangingName="SaleInfoClientsRowChanging" msprop:Generator_RowEvHandlerName="SaleInfoClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleInfoClientsRowDeleted" msprop:Generator_UserTableName="SaleInfoClients" msprop:Generator_RowChangedName="SaleInfoClientsRowChanged" msprop:Generator_RowEvArgName="SaleInfoClientsRowChangeEvent" msprop:Generator_RowClassName="SaleInfoClientsRow">
+        <xs:element name="SaleInfoClients" msprop:Generator_TableClassName="SaleInfoClientsDataTable" msprop:Generator_TableVarName="tableSaleInfoClients" msprop:Generator_RowChangedName="SaleInfoClientsRowChanged" msprop:Generator_TablePropName="SaleInfoClients" msprop:Generator_RowDeletingName="SaleInfoClientsRowDeleting" msprop:Generator_RowChangingName="SaleInfoClientsRowChanging" msprop:Generator_RowEvHandlerName="SaleInfoClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleInfoClientsRowDeleted" msprop:Generator_RowClassName="SaleInfoClientsRow" msprop:Generator_UserTableName="SaleInfoClients" msprop:Generator_RowEvArgName="SaleInfoClientsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -620,7 +643,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SaleInfoFlights" msprop:Generator_TableClassName="SaleInfoFlightsDataTable" msprop:Generator_TableVarName="tableSaleInfoFlights" msprop:Generator_TablePropName="SaleInfoFlights" msprop:Generator_RowDeletingName="SaleInfoFlightsRowDeleting" msprop:Generator_RowChangingName="SaleInfoFlightsRowChanging" msprop:Generator_RowEvHandlerName="SaleInfoFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleInfoFlightsRowDeleted" msprop:Generator_UserTableName="SaleInfoFlights" msprop:Generator_RowChangedName="SaleInfoFlightsRowChanged" msprop:Generator_RowEvArgName="SaleInfoFlightsRowChangeEvent" msprop:Generator_RowClassName="SaleInfoFlightsRow">
+        <xs:element name="SaleInfoFlights" msprop:Generator_TableClassName="SaleInfoFlightsDataTable" msprop:Generator_TableVarName="tableSaleInfoFlights" msprop:Generator_RowChangedName="SaleInfoFlightsRowChanged" msprop:Generator_TablePropName="SaleInfoFlights" msprop:Generator_RowDeletingName="SaleInfoFlightsRowDeleting" msprop:Generator_RowChangingName="SaleInfoFlightsRowChanging" msprop:Generator_RowEvHandlerName="SaleInfoFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleInfoFlightsRowDeleted" msprop:Generator_RowClassName="SaleInfoFlightsRow" msprop:Generator_UserTableName="SaleInfoFlights" msprop:Generator_RowEvArgName="SaleInfoFlightsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -643,7 +666,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TodaysFlights" msprop:Generator_TableClassName="TodaysFlightsDataTable" msprop:Generator_TableVarName="tableTodaysFlights" msprop:Generator_TablePropName="TodaysFlights" msprop:Generator_RowDeletingName="TodaysFlightsRowDeleting" msprop:Generator_RowChangingName="TodaysFlightsRowChanging" msprop:Generator_RowEvHandlerName="TodaysFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="TodaysFlightsRowDeleted" msprop:Generator_UserTableName="TodaysFlights" msprop:Generator_RowChangedName="TodaysFlightsRowChanged" msprop:Generator_RowEvArgName="TodaysFlightsRowChangeEvent" msprop:Generator_RowClassName="TodaysFlightsRow">
+        <xs:element name="TodaysFlights" msprop:Generator_TableClassName="TodaysFlightsDataTable" msprop:Generator_TableVarName="tableTodaysFlights" msprop:Generator_RowChangedName="TodaysFlightsRowChanged" msprop:Generator_TablePropName="TodaysFlights" msprop:Generator_RowDeletingName="TodaysFlightsRowDeleting" msprop:Generator_RowChangingName="TodaysFlightsRowChanging" msprop:Generator_RowEvHandlerName="TodaysFlightsRowChangeEventHandler" msprop:Generator_RowDeletedName="TodaysFlightsRowDeleted" msprop:Generator_RowClassName="TodaysFlightsRow" msprop:Generator_UserTableName="TodaysFlights" msprop:Generator_RowEvArgName="TodaysFlightsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -654,7 +677,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GetClientsOnFlight" msprop:Generator_TableClassName="GetClientsOnFlightDataTable" msprop:Generator_TableVarName="tableGetClientsOnFlight" msprop:Generator_TablePropName="GetClientsOnFlight" msprop:Generator_RowDeletingName="GetClientsOnFlightRowDeleting" msprop:Generator_RowChangingName="GetClientsOnFlightRowChanging" msprop:Generator_RowEvHandlerName="GetClientsOnFlightRowChangeEventHandler" msprop:Generator_RowDeletedName="GetClientsOnFlightRowDeleted" msprop:Generator_UserTableName="GetClientsOnFlight" msprop:Generator_RowChangedName="GetClientsOnFlightRowChanged" msprop:Generator_RowEvArgName="GetClientsOnFlightRowChangeEvent" msprop:Generator_RowClassName="GetClientsOnFlightRow">
+        <xs:element name="GetClientsOnFlight" msprop:Generator_TableClassName="GetClientsOnFlightDataTable" msprop:Generator_TableVarName="tableGetClientsOnFlight" msprop:Generator_RowChangedName="GetClientsOnFlightRowChanged" msprop:Generator_TablePropName="GetClientsOnFlight" msprop:Generator_RowDeletingName="GetClientsOnFlightRowDeleting" msprop:Generator_RowChangingName="GetClientsOnFlightRowChanging" msprop:Generator_RowEvHandlerName="GetClientsOnFlightRowChangeEventHandler" msprop:Generator_RowDeletedName="GetClientsOnFlightRowDeleted" msprop:Generator_RowClassName="GetClientsOnFlightRow" msprop:Generator_UserTableName="GetClientsOnFlight" msprop:Generator_RowEvArgName="GetClientsOnFlightRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
@@ -674,7 +697,7 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GetFlightsByAirport" msprop:Generator_TableClassName="GetFlightsByAirportDataTable" msprop:Generator_TableVarName="tableGetFlightsByAirport" msprop:Generator_TablePropName="GetFlightsByAirport" msprop:Generator_RowDeletingName="GetFlightsByAirportRowDeleting" msprop:Generator_RowChangingName="GetFlightsByAirportRowChanging" msprop:Generator_RowEvHandlerName="GetFlightsByAirportRowChangeEventHandler" msprop:Generator_RowDeletedName="GetFlightsByAirportRowDeleted" msprop:Generator_UserTableName="GetFlightsByAirport" msprop:Generator_RowChangedName="GetFlightsByAirportRowChanged" msprop:Generator_RowEvArgName="GetFlightsByAirportRowChangeEvent" msprop:Generator_RowClassName="GetFlightsByAirportRow">
+        <xs:element name="GetFlightsByAirport" msprop:Generator_TableClassName="GetFlightsByAirportDataTable" msprop:Generator_TableVarName="tableGetFlightsByAirport" msprop:Generator_RowChangedName="GetFlightsByAirportRowChanged" msprop:Generator_TablePropName="GetFlightsByAirport" msprop:Generator_RowDeletingName="GetFlightsByAirportRowDeleting" msprop:Generator_RowChangingName="GetFlightsByAirportRowChanging" msprop:Generator_RowEvHandlerName="GetFlightsByAirportRowChangeEventHandler" msprop:Generator_RowDeletedName="GetFlightsByAirportRowDeleted" msprop:Generator_RowClassName="GetFlightsByAirportRow" msprop:Generator_UserTableName="GetFlightsByAirport" msprop:Generator_RowEvArgName="GetFlightsByAirportRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -682,6 +705,44 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
               <xs:element name="IdAirportTo" msprop:Generator_ColumnVarNameInTable="columnIdAirportTo" msprop:Generator_ColumnPropNameInRow="IdAirportTo" msprop:Generator_ColumnPropNameInTable="IdAirportToColumn" msprop:Generator_UserColumnName="IdAirportTo" type="xs:int" minOccurs="0" />
               <xs:element name="IdPlane" msprop:Generator_ColumnVarNameInTable="columnIdPlane" msprop:Generator_ColumnPropNameInRow="IdPlane" msprop:Generator_ColumnPropNameInTable="IdPlaneColumn" msprop:Generator_UserColumnName="IdPlane" type="xs:int" minOccurs="0" />
               <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SalesMagazineReport" msprop:Generator_TableClassName="SalesMagazineReportDataTable" msprop:Generator_TableVarName="tableSalesMagazineReport" msprop:Generator_TablePropName="SalesMagazineReport" msprop:Generator_RowDeletingName="SalesMagazineReportRowDeleting" msprop:Generator_RowChangingName="SalesMagazineReportRowChanging" msprop:Generator_RowEvHandlerName="SalesMagazineReportRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesMagazineReportRowDeleted" msprop:Generator_UserTableName="SalesMagazineReport" msprop:Generator_RowChangedName="SalesMagazineReportRowChanged" msprop:Generator_RowEvArgName="SalesMagazineReportRowChangeEvent" msprop:Generator_RowClassName="SalesMagazineReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PassportId" msprop:Generator_ColumnVarNameInTable="columnPassportId" msprop:Generator_ColumnPropNameInRow="PassportId" msprop:Generator_ColumnPropNameInTable="PassportIdColumn" msprop:Generator_UserColumnName="PassportId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AirportFrom" msprop:Generator_ColumnVarNameInTable="columnAirportFrom" msprop:Generator_ColumnPropNameInRow="AirportFrom" msprop:Generator_ColumnPropNameInTable="AirportFromColumn" msprop:Generator_UserColumnName="AirportFrom">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AirportTo" msprop:Generator_ColumnVarNameInTable="columnAirportTo" msprop:Generator_ColumnPropNameInRow="AirportTo" msprop:Generator_ColumnPropNameInTable="AirportToColumn" msprop:Generator_UserColumnName="AirportTo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" />
+              <xs:element name="DateSale" msprop:Generator_ColumnVarNameInTable="columnDateSale" msprop:Generator_ColumnPropNameInRow="DateSale" msprop:Generator_ColumnPropNameInTable="DateSaleColumn" msprop:Generator_UserColumnName="DateSale" type="xs:dateTime" />
+              <xs:element name="DateFlight" msprop:Generator_ColumnVarNameInTable="columnDateFlight" msprop:Generator_ColumnPropNameInRow="DateFlight" msprop:Generator_ColumnPropNameInTable="DateFlightColumn" msprop:Generator_UserColumnName="DateFlight" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -727,14 +788,18 @@ SELECT Id, IdClient, IdFlight, DateSale, DateFlight FROM SalesMagazine WHERE (Id
       <xs:selector xpath=".//mstns:GetFlightsByAirport" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
+    <xs:unique name="SalesMagazineReport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SalesMagazineReport" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Flights__IdAirpo__6383C8BA" msdata:parent="Airports" msdata:child="Flights" msdata:parentkey="Id" msdata:childkey="IdAirportFrom" msprop:Generator_UserChildTable="Flights" msprop:Generator_ChildPropName="GetFlightsRowsByFK__Flights__IdAirpo__6383C8BA" msprop:Generator_UserRelationName="FK__Flights__IdAirpo__6383C8BA" msprop:Generator_ParentPropName="AirportsRowByFK__Flights__IdAirpo__6383C8BA" msprop:Generator_RelationVarName="relationFK__Flights__IdAirpo__6383C8BA" msprop:Generator_UserParentTable="Airports" />
-      <msdata:Relationship name="FK__Flights__IdAirpo__6477ECF3" msdata:parent="Airports" msdata:child="Flights" msdata:parentkey="Id" msdata:childkey="IdAirportTo" msprop:Generator_UserChildTable="Flights" msprop:Generator_ChildPropName="GetFlightsRowsByFK__Flights__IdAirpo__6477ECF3" msprop:Generator_UserRelationName="FK__Flights__IdAirpo__6477ECF3" msprop:Generator_ParentPropName="AirportsRowByFK__Flights__IdAirpo__6477ECF3" msprop:Generator_RelationVarName="relationFK__Flights__IdAirpo__6477ECF3" msprop:Generator_UserParentTable="Airports" />
-      <msdata:Relationship name="FK__Flights__IdPlane__656C112C" msdata:parent="Planes" msdata:child="Flights" msdata:parentkey="Id" msdata:childkey="IdPlane" msprop:Generator_UserChildTable="Flights" msprop:Generator_ChildPropName="GetFlightsRows" msprop:Generator_UserRelationName="FK__Flights__IdPlane__656C112C" msprop:Generator_RelationVarName="relationFK__Flights__IdPlane__656C112C" msprop:Generator_UserParentTable="Planes" msprop:Generator_ParentPropName="PlanesRow" />
-      <msdata:Relationship name="FK__SalesMaga__IdCli__693CA210" msdata:parent="Clients" msdata:child="SalesMagazine" msdata:parentkey="Id" msdata:childkey="IdClient" msprop:Generator_UserChildTable="SalesMagazine" msprop:Generator_ChildPropName="GetSalesMagazineRows" msprop:Generator_UserRelationName="FK__SalesMaga__IdCli__693CA210" msprop:Generator_ParentPropName="ClientsRow" msprop:Generator_RelationVarName="relationFK__SalesMaga__IdCli__693CA210" msprop:Generator_UserParentTable="Clients" />
-      <msdata:Relationship name="FK__SalesMaga__IdFli__6A30C649" msdata:parent="Flights" msdata:child="SalesMagazine" msdata:parentkey="Id" msdata:childkey="IdFlight" msprop:Generator_UserChildTable="SalesMagazine" msprop:Generator_ChildPropName="GetSalesMagazineRows" msprop:Generator_UserRelationName="FK__SalesMaga__IdFli__6A30C649" msprop:Generator_ParentPropName="FlightsRow" msprop:Generator_RelationVarName="relationFK__SalesMaga__IdFli__6A30C649" msprop:Generator_UserParentTable="Flights" />
+      <msdata:Relationship name="FK__Flights__IdAirpo__6383C8BA" msdata:parent="Airports" msdata:child="Flights" msdata:parentkey="Id" msdata:childkey="IdAirportFrom" msprop:Generator_UserChildTable="Flights" msprop:Generator_ChildPropName="GetFlightsRowsByFK__Flights__IdAirpo__6383C8BA" msprop:Generator_UserRelationName="FK__Flights__IdAirpo__6383C8BA" msprop:Generator_RelationVarName="relationFK__Flights__IdAirpo__6383C8BA" msprop:Generator_UserParentTable="Airports" msprop:Generator_ParentPropName="AirportsRowByFK__Flights__IdAirpo__6383C8BA" />
+      <msdata:Relationship name="FK__Flights__IdAirpo__6477ECF3" msdata:parent="Airports" msdata:child="Flights" msdata:parentkey="Id" msdata:childkey="IdAirportTo" msprop:Generator_UserChildTable="Flights" msprop:Generator_ChildPropName="GetFlightsRowsByFK__Flights__IdAirpo__6477ECF3" msprop:Generator_UserRelationName="FK__Flights__IdAirpo__6477ECF3" msprop:Generator_RelationVarName="relationFK__Flights__IdAirpo__6477ECF3" msprop:Generator_UserParentTable="Airports" msprop:Generator_ParentPropName="AirportsRowByFK__Flights__IdAirpo__6477ECF3" />
+      <msdata:Relationship name="FK__Flights__IdPlane__656C112C" msdata:parent="Planes" msdata:child="Flights" msdata:parentkey="Id" msdata:childkey="IdPlane" msprop:Generator_UserChildTable="Flights" msprop:Generator_ChildPropName="GetFlightsRows" msprop:Generator_UserRelationName="FK__Flights__IdPlane__656C112C" msprop:Generator_ParentPropName="PlanesRow" msprop:Generator_RelationVarName="relationFK__Flights__IdPlane__656C112C" msprop:Generator_UserParentTable="Planes" />
+      <msdata:Relationship name="FK__SalesMaga__IdCli__693CA210" msdata:parent="Clients" msdata:child="SalesMagazine" msdata:parentkey="Id" msdata:childkey="IdClient" msprop:Generator_UserChildTable="SalesMagazine" msprop:Generator_ChildPropName="GetSalesMagazineRows" msprop:Generator_UserRelationName="FK__SalesMaga__IdCli__693CA210" msprop:Generator_RelationVarName="relationFK__SalesMaga__IdCli__693CA210" msprop:Generator_UserParentTable="Clients" msprop:Generator_ParentPropName="ClientsRow" />
+      <msdata:Relationship name="FK__SalesMaga__IdFli__6A30C649" msdata:parent="Flights" msdata:child="SalesMagazine" msdata:parentkey="Id" msdata:childkey="IdFlight" msprop:Generator_UserChildTable="SalesMagazine" msprop:Generator_ChildPropName="GetSalesMagazineRows" msprop:Generator_UserRelationName="FK__SalesMaga__IdFli__6A30C649" msprop:Generator_RelationVarName="relationFK__SalesMaga__IdFli__6A30C649" msprop:Generator_UserParentTable="Flights" msprop:Generator_ParentPropName="FlightsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

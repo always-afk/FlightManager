@@ -54,11 +54,21 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Alternative = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_Filter = new System.Windows.Forms.Button();
+            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.ClientsTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button_RemoveFilter = new System.Windows.Forms.Button();
+            this.button_Clients = new System.Windows.Forms.Button();
+            this.button_Flights = new System.Windows.Forms.Button();
+            this.button_Report = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineBindingNavigator)).BeginInit();
             this.salesMagazineBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fM_DataDataSet
@@ -111,7 +121,7 @@ namespace FlightManager
             this.salesMagazineBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.salesMagazineBindingNavigator.Name = "salesMagazineBindingNavigator";
             this.salesMagazineBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.salesMagazineBindingNavigator.Size = new System.Drawing.Size(472, 25);
+            this.salesMagazineBindingNavigator.Size = new System.Drawing.Size(563, 25);
             this.salesMagazineBindingNavigator.TabIndex = 0;
             this.salesMagazineBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -220,9 +230,9 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.salesMagazineDataGridView.DataSource = this.salesMagazineBindingSource;
-            this.salesMagazineDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.salesMagazineDataGridView.Location = new System.Drawing.Point(12, 66);
             this.salesMagazineDataGridView.Name = "salesMagazineDataGridView";
-            this.salesMagazineDataGridView.Size = new System.Drawing.Size(448, 410);
+            this.salesMagazineDataGridView.Size = new System.Drawing.Size(458, 372);
             this.salesMagazineDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn2
@@ -259,16 +269,104 @@ namespace FlightManager
             this.button_Alternative.UseVisualStyleBackColor = true;
             this.button_Alternative.Click += new System.EventHandler(this.button_Alternative_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "From";
+            // 
+            // button_Filter
+            // 
+            this.button_Filter.Location = new System.Drawing.Point(476, 66);
+            this.button_Filter.Name = "button_Filter";
+            this.button_Filter.Size = new System.Drawing.Size(75, 23);
+            this.button_Filter.TabIndex = 7;
+            this.button_Filter.Text = "Filter";
+            this.button_Filter.UseVisualStyleBackColor = true;
+            this.button_Filter.Click += new System.EventHandler(this.button_Filter_Click);
+            // 
+            // clientsBindingSource
+            // 
+            this.clientsBindingSource.DataMember = "Clients";
+            this.clientsBindingSource.DataSource = this.fM_DataDataSet;
+            // 
+            // clientsTableAdapter
+            // 
+            this.clientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.clientsBindingSource;
+            this.comboBox1.DisplayMember = "PassportId";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(45, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.ValueMember = "Id";
+            // 
+            // button_RemoveFilter
+            // 
+            this.button_RemoveFilter.Location = new System.Drawing.Point(476, 95);
+            this.button_RemoveFilter.Name = "button_RemoveFilter";
+            this.button_RemoveFilter.Size = new System.Drawing.Size(75, 40);
+            this.button_RemoveFilter.TabIndex = 9;
+            this.button_RemoveFilter.Text = "Remove Filter";
+            this.button_RemoveFilter.UseVisualStyleBackColor = true;
+            this.button_RemoveFilter.Click += new System.EventHandler(this.button_RemoveFilter_Click);
+            // 
+            // button_Clients
+            // 
+            this.button_Clients.Location = new System.Drawing.Point(476, 142);
+            this.button_Clients.Name = "button_Clients";
+            this.button_Clients.Size = new System.Drawing.Size(75, 23);
+            this.button_Clients.TabIndex = 10;
+            this.button_Clients.Text = "Clients";
+            this.button_Clients.UseVisualStyleBackColor = true;
+            this.button_Clients.Click += new System.EventHandler(this.button_Clients_Click);
+            // 
+            // button_Flights
+            // 
+            this.button_Flights.Location = new System.Drawing.Point(476, 171);
+            this.button_Flights.Name = "button_Flights";
+            this.button_Flights.Size = new System.Drawing.Size(75, 23);
+            this.button_Flights.TabIndex = 11;
+            this.button_Flights.Text = "Flights";
+            this.button_Flights.UseVisualStyleBackColor = true;
+            this.button_Flights.Click += new System.EventHandler(this.button_Flights_Click);
+            // 
+            // button_Report
+            // 
+            this.button_Report.Location = new System.Drawing.Point(476, 200);
+            this.button_Report.Name = "button_Report";
+            this.button_Report.Size = new System.Drawing.Size(75, 23);
+            this.button_Report.TabIndex = 12;
+            this.button_Report.Text = "Report";
+            this.button_Report.UseVisualStyleBackColor = true;
+            this.button_Report.Click += new System.EventHandler(this.button_Report_Click);
+            // 
             // SalesMagazineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 450);
+            this.ClientSize = new System.Drawing.Size(563, 450);
+            this.Controls.Add(this.button_Report);
+            this.Controls.Add(this.button_Flights);
+            this.Controls.Add(this.button_Clients);
+            this.Controls.Add(this.button_RemoveFilter);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button_Filter);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Alternative);
             this.Controls.Add(this.salesMagazineDataGridView);
             this.Controls.Add(this.salesMagazineBindingNavigator);
             this.Name = "SalesMagazineForm";
             this.Text = "SalesMagazineForm";
+            this.Activated += new System.EventHandler(this.SalesMagazineForm_Activated);
             this.Load += new System.EventHandler(this.SalesMagazineForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineBindingSource)).EndInit();
@@ -276,6 +374,7 @@ namespace FlightManager
             this.salesMagazineBindingNavigator.ResumeLayout(false);
             this.salesMagazineBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesMagazineDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +405,14 @@ namespace FlightManager
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button button_Alternative;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_Filter;
+        private System.Windows.Forms.BindingSource clientsBindingSource;
+        private FM_DataDataSetTableAdapters.ClientsTableAdapter clientsTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button_RemoveFilter;
+        private System.Windows.Forms.Button button_Clients;
+        private System.Windows.Forms.Button button_Flights;
+        private System.Windows.Forms.Button button_Report;
     }
 }
