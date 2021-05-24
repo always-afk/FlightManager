@@ -51,7 +51,6 @@ namespace FlightManager
             this.planesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_Alternative = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planesBindingNavigator)).BeginInit();
@@ -109,7 +108,7 @@ namespace FlightManager
             this.planesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.planesBindingNavigator.Name = "planesBindingNavigator";
             this.planesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.planesBindingNavigator.Size = new System.Drawing.Size(471, 25);
+            this.planesBindingNavigator.Size = new System.Drawing.Size(335, 25);
             this.planesBindingNavigator.TabIndex = 0;
             this.planesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -233,22 +232,11 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn3.HeaderText = "NumOfSeats";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // button_Alternative
-            // 
-            this.button_Alternative.Location = new System.Drawing.Point(294, 2);
-            this.button_Alternative.Name = "button_Alternative";
-            this.button_Alternative.Size = new System.Drawing.Size(75, 23);
-            this.button_Alternative.TabIndex = 2;
-            this.button_Alternative.Text = "Alternative";
-            this.button_Alternative.UseVisualStyleBackColor = true;
-            this.button_Alternative.Click += new System.EventHandler(this.button_Alternative_Click);
-            // 
             // PlanesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 450);
-            this.Controls.Add(this.button_Alternative);
+            this.ClientSize = new System.Drawing.Size(335, 450);
             this.Controls.Add(this.planesDataGridView);
             this.Controls.Add(this.planesBindingNavigator);
             this.Name = "PlanesForm";
@@ -287,6 +275,5 @@ namespace FlightManager
         private System.Windows.Forms.DataGridView planesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Button button_Alternative;
     }
 }

@@ -78,5 +78,15 @@ namespace FlightManager
             flightsBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(fM_DataDataSet);
         }
+
+        private void button_Airports_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<AirportsForm>();
+        }
+
+        private void button_Planes_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<PlanesForm>();
+        }
     }
 }

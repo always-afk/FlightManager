@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlightManager.Forms;
 
 namespace FlightManager
 {
@@ -83,6 +84,26 @@ namespace FlightManager
             this.salesMagazineBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.fM_DataDataSet);
 
+        }
+
+        private void button_Clients_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<ClientsForm>();
+        }
+
+        private void button_Flights_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<FlightsFormAlternative>();
+        }
+
+        private void button_Report_Click(object sender, EventArgs e)
+        {
+            FormOpener.ShowForm<SalesMagazineReportForm>();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -52,7 +52,6 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_Alternative = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingNavigator)).BeginInit();
@@ -241,22 +240,11 @@ namespace FlightManager
             this.dataGridViewTextBoxColumn4.HeaderText = "PassportId";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // button_Alternative
-            // 
-            this.button_Alternative.Location = new System.Drawing.Point(293, 2);
-            this.button_Alternative.Name = "button_Alternative";
-            this.button_Alternative.Size = new System.Drawing.Size(75, 23);
-            this.button_Alternative.TabIndex = 2;
-            this.button_Alternative.Text = "Alternative";
-            this.button_Alternative.UseVisualStyleBackColor = true;
-            this.button_Alternative.Click += new System.EventHandler(this.button_Alternative_Click);
-            // 
             // ClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 450);
-            this.Controls.Add(this.button_Alternative);
             this.Controls.Add(this.clientsDataGridView);
             this.Controls.Add(this.clientsBindingNavigator);
             this.Name = "ClientsForm";
@@ -296,6 +284,5 @@ namespace FlightManager
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Button button_Alternative;
     }
 }

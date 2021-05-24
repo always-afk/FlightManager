@@ -63,11 +63,13 @@ namespace FlightManager
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.airportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.airportsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.planesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.airportsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.AirportsTableAdapter();
             this.planesTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.PlanesTableAdapter();
-            this.airportsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button_Planes = new System.Windows.Forms.Button();
+            this.button_Airports = new System.Windows.Forms.Button();
             idAirportFromLabel = new System.Windows.Forms.Label();
             idAirportToLabel = new System.Windows.Forms.Label();
             idPlaneLabel = new System.Windows.Forms.Label();
@@ -77,8 +79,8 @@ namespace FlightManager
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingNavigator)).BeginInit();
             this.flightsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idAirportFromLabel
@@ -373,6 +375,11 @@ namespace FlightManager
             this.comboBox2.TabIndex = 22;
             this.comboBox2.ValueMember = "Id";
             // 
+            // airportsBindingSource1
+            // 
+            this.airportsBindingSource1.DataMember = "Airports";
+            this.airportsBindingSource1.DataSource = this.fM_DataDataSet;
+            // 
             // comboBox3
             // 
             this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdPlane", true));
@@ -398,16 +405,33 @@ namespace FlightManager
             // 
             this.planesTableAdapter.ClearBeforeFill = true;
             // 
-            // airportsBindingSource1
+            // button_Planes
             // 
-            this.airportsBindingSource1.DataMember = "Airports";
-            this.airportsBindingSource1.DataSource = this.fM_DataDataSet;
+            this.button_Planes.Location = new System.Drawing.Point(279, 85);
+            this.button_Planes.Name = "button_Planes";
+            this.button_Planes.Size = new System.Drawing.Size(75, 23);
+            this.button_Planes.TabIndex = 25;
+            this.button_Planes.Text = "Planes";
+            this.button_Planes.UseVisualStyleBackColor = true;
+            this.button_Planes.Click += new System.EventHandler(this.button_Planes_Click);
+            // 
+            // button_Airports
+            // 
+            this.button_Airports.Location = new System.Drawing.Point(279, 56);
+            this.button_Airports.Name = "button_Airports";
+            this.button_Airports.Size = new System.Drawing.Size(75, 23);
+            this.button_Airports.TabIndex = 24;
+            this.button_Airports.Text = "Airports";
+            this.button_Airports.UseVisualStyleBackColor = true;
+            this.button_Airports.Click += new System.EventHandler(this.button_Airports_Click);
             // 
             // FlightsFormAlternative
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 244);
+            this.Controls.Add(this.button_Planes);
+            this.Controls.Add(this.button_Airports);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -434,8 +458,8 @@ namespace FlightManager
             this.flightsBindingNavigator.ResumeLayout(false);
             this.flightsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.airportsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,5 +500,7 @@ namespace FlightManager
         private System.Windows.Forms.BindingSource planesBindingSource;
         private FM_DataDataSetTableAdapters.PlanesTableAdapter planesTableAdapter;
         private System.Windows.Forms.BindingSource airportsBindingSource1;
+        private System.Windows.Forms.Button button_Planes;
+        private System.Windows.Forms.Button button_Airports;
     }
 }

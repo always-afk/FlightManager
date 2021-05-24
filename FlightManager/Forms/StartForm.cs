@@ -29,7 +29,7 @@ namespace FlightManager
 
         private void button_Flights_Click(object sender, EventArgs e)
         {
-            FormOpener.ShowForm<FlightsForm>();
+            FormOpener.ShowForm<FlightsFormAlternative>();
         }
 
         private void button_Planes_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace FlightManager
 
         private void button_SalesMagazine_Click(object sender, EventArgs e)
         {
-            FormOpener.ShowForm<SalesMagazineForm>();
+            FormOpener.ShowForm<SalesMagazineFormAlternative>();
         }
     }
 }

@@ -49,7 +49,6 @@ namespace FlightManager
             this.airportsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.airportsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.airportsDataGridView = new System.Windows.Forms.DataGridView();
-            this.button_Alternative = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.fM_DataDataSet)).BeginInit();
@@ -221,16 +220,6 @@ namespace FlightManager
             this.airportsDataGridView.Size = new System.Drawing.Size(327, 410);
             this.airportsDataGridView.TabIndex = 1;
             // 
-            // button_Alternative
-            // 
-            this.button_Alternative.Location = new System.Drawing.Point(287, 2);
-            this.button_Alternative.Name = "button_Alternative";
-            this.button_Alternative.Size = new System.Drawing.Size(75, 23);
-            this.button_Alternative.TabIndex = 2;
-            this.button_Alternative.Text = "Alternative";
-            this.button_Alternative.UseVisualStyleBackColor = true;
-            this.button_Alternative.Click += new System.EventHandler(this.button_Alternative_Click);
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "IATA";
@@ -248,7 +237,6 @@ namespace FlightManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 450);
-            this.Controls.Add(this.button_Alternative);
             this.Controls.Add(this.airportsDataGridView);
             this.Controls.Add(this.airportsBindingNavigator);
             this.Name = "AirportsForm";
@@ -287,7 +275,6 @@ namespace FlightManager
         private System.Windows.Forms.DataGridView airportsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Button button_Alternative;
     }
 }
 

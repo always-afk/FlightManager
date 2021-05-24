@@ -32,9 +32,5 @@ namespace FlightManager
 
         }
 
-        private void button_Alternative_Click(object sender, EventArgs e)
-        {
-            FormOpener.ShowForm<ClientsFormAlternative>();
-        }
     }
 }

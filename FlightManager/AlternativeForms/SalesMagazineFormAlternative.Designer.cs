@@ -30,11 +30,11 @@ namespace FlightManager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesMagazineFormAlternative));
             System.Windows.Forms.Label idClientLabel;
             System.Windows.Forms.Label idFlightLabel;
             System.Windows.Forms.Label dateSaleLabel;
             System.Windows.Forms.Label dateFlightLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesMagazineFormAlternative));
             this.button_First = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Delete = new System.Windows.Forms.Button();
@@ -46,27 +46,30 @@ namespace FlightManager
             this.salesMagazineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesMagazineTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.SalesMagazineTableAdapter();
             this.tableAdapterManager = new FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager();
+            this.clientsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.ClientsTableAdapter();
+            this.flightsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.FlightsTableAdapter();
             this.salesMagazineBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.salesMagazineBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.dateSaleDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateFlightDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.ClientsTableAdapter();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.flightsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flightsTableAdapter = new FlightManager.FM_DataDataSetTableAdapters.FlightsTableAdapter();
+            this.button_Report = new System.Windows.Forms.Button();
+            this.button_Flights = new System.Windows.Forms.Button();
+            this.button_Clients = new System.Windows.Forms.Button();
             idClientLabel = new System.Windows.Forms.Label();
             idFlightLabel = new System.Windows.Forms.Label();
             dateSaleLabel = new System.Windows.Forms.Label();
@@ -78,6 +81,42 @@ namespace FlightManager
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightsBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idClientLabel
+            // 
+            idClientLabel.AutoSize = true;
+            idClientLabel.Location = new System.Drawing.Point(22, 39);
+            idClientLabel.Name = "idClientLabel";
+            idClientLabel.Size = new System.Drawing.Size(48, 13);
+            idClientLabel.TabIndex = 44;
+            idClientLabel.Text = "Id Client:";
+            // 
+            // idFlightLabel
+            // 
+            idFlightLabel.AutoSize = true;
+            idFlightLabel.Location = new System.Drawing.Point(22, 65);
+            idFlightLabel.Name = "idFlightLabel";
+            idFlightLabel.Size = new System.Drawing.Size(47, 13);
+            idFlightLabel.TabIndex = 46;
+            idFlightLabel.Text = "Id Flight:";
+            // 
+            // dateSaleLabel
+            // 
+            dateSaleLabel.AutoSize = true;
+            dateSaleLabel.Location = new System.Drawing.Point(22, 92);
+            dateSaleLabel.Name = "dateSaleLabel";
+            dateSaleLabel.Size = new System.Drawing.Size(57, 13);
+            dateSaleLabel.TabIndex = 48;
+            dateSaleLabel.Text = "Date Sale:";
+            // 
+            // dateFlightLabel
+            // 
+            dateFlightLabel.AutoSize = true;
+            dateFlightLabel.Location = new System.Drawing.Point(22, 118);
+            dateFlightLabel.Name = "dateFlightLabel";
+            dateFlightLabel.Size = new System.Drawing.Size(61, 13);
+            dateFlightLabel.TabIndex = 50;
+            dateFlightLabel.Text = "Date Flight:";
             // 
             // button_First
             // 
@@ -173,6 +212,14 @@ namespace FlightManager
             this.tableAdapterManager.SalesMagazineTableAdapter = this.salesMagazineTableAdapter;
             this.tableAdapterManager.UpdateOrder = FlightManager.FM_DataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // clientsTableAdapter
+            // 
+            this.clientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // flightsTableAdapter
+            // 
+            this.flightsTableAdapter.ClearBeforeFill = true;
+            // 
             // salesMagazineBindingNavigator
             // 
             this.salesMagazineBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -199,9 +246,34 @@ namespace FlightManager
             this.salesMagazineBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.salesMagazineBindingNavigator.Name = "salesMagazineBindingNavigator";
             this.salesMagazineBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.salesMagazineBindingNavigator.Size = new System.Drawing.Size(373, 25);
+            this.salesMagazineBindingNavigator.Size = new System.Drawing.Size(381, 25);
             this.salesMagazineBindingNavigator.TabIndex = 42;
             this.salesMagazineBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -230,22 +302,16 @@ namespace FlightManager
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -253,7 +319,7 @@ namespace FlightManager
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -262,67 +328,22 @@ namespace FlightManager
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // salesMagazineBindingNavigatorSaveItem
             // 
             this.salesMagazineBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.salesMagazineBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesMagazineBindingNavigatorSaveItem.Image")));
             this.salesMagazineBindingNavigatorSaveItem.Name = "salesMagazineBindingNavigatorSaveItem";
-            this.salesMagazineBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.salesMagazineBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.salesMagazineBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.salesMagazineBindingNavigatorSaveItem.Click += new System.EventHandler(this.salesMagazineBindingNavigatorSaveItem_Click_1);
-            // 
-            // idClientLabel
-            // 
-            idClientLabel.AutoSize = true;
-            idClientLabel.Location = new System.Drawing.Point(22, 39);
-            idClientLabel.Name = "idClientLabel";
-            idClientLabel.Size = new System.Drawing.Size(48, 13);
-            idClientLabel.TabIndex = 44;
-            idClientLabel.Text = "Id Client:";
-            // 
-            // idFlightLabel
-            // 
-            idFlightLabel.AutoSize = true;
-            idFlightLabel.Location = new System.Drawing.Point(22, 65);
-            idFlightLabel.Name = "idFlightLabel";
-            idFlightLabel.Size = new System.Drawing.Size(47, 13);
-            idFlightLabel.TabIndex = 46;
-            idFlightLabel.Text = "Id Flight:";
-            // 
-            // dateSaleLabel
-            // 
-            dateSaleLabel.AutoSize = true;
-            dateSaleLabel.Location = new System.Drawing.Point(22, 92);
-            dateSaleLabel.Name = "dateSaleLabel";
-            dateSaleLabel.Size = new System.Drawing.Size(57, 13);
-            dateSaleLabel.TabIndex = 48;
-            dateSaleLabel.Text = "Date Sale:";
             // 
             // dateSaleDateTimePicker
             // 
@@ -331,15 +352,6 @@ namespace FlightManager
             this.dateSaleDateTimePicker.Name = "dateSaleDateTimePicker";
             this.dateSaleDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dateSaleDateTimePicker.TabIndex = 49;
-            // 
-            // dateFlightLabel
-            // 
-            dateFlightLabel.AutoSize = true;
-            dateFlightLabel.Location = new System.Drawing.Point(22, 118);
-            dateFlightLabel.Name = "dateFlightLabel";
-            dateFlightLabel.Size = new System.Drawing.Size(61, 13);
-            dateFlightLabel.TabIndex = 50;
-            dateFlightLabel.Text = "Date Flight:";
             // 
             // dateFlightDateTimePicker
             // 
@@ -360,21 +372,18 @@ namespace FlightManager
             this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 52;
             this.comboBox1.ValueMember = "Id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // clientsBindingSource
             // 
             this.clientsBindingSource.DataMember = "Clients";
             this.clientsBindingSource.DataSource = this.fM_DataDataSet;
             // 
-            // clientsTableAdapter
-            // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
-            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salesMagazineBindingSource, "IdFlight", true));
             this.comboBox2.DataSource = this.flightsBindingSource;
-            this.comboBox2.DisplayMember = "Price";
+            this.comboBox2.DisplayMember = "Id";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(89, 62);
             this.comboBox2.Name = "comboBox2";
@@ -387,15 +396,44 @@ namespace FlightManager
             this.flightsBindingSource.DataMember = "Flights";
             this.flightsBindingSource.DataSource = this.fM_DataDataSet;
             // 
-            // flightsTableAdapter
+            // button_Report
             // 
-            this.flightsTableAdapter.ClearBeforeFill = true;
+            this.button_Report.Location = new System.Drawing.Point(295, 97);
+            this.button_Report.Name = "button_Report";
+            this.button_Report.Size = new System.Drawing.Size(75, 23);
+            this.button_Report.TabIndex = 56;
+            this.button_Report.Text = "Report";
+            this.button_Report.UseVisualStyleBackColor = true;
+            this.button_Report.Click += new System.EventHandler(this.button_Report_Click);
+            // 
+            // button_Flights
+            // 
+            this.button_Flights.Location = new System.Drawing.Point(295, 68);
+            this.button_Flights.Name = "button_Flights";
+            this.button_Flights.Size = new System.Drawing.Size(75, 23);
+            this.button_Flights.TabIndex = 55;
+            this.button_Flights.Text = "Flights";
+            this.button_Flights.UseVisualStyleBackColor = true;
+            this.button_Flights.Click += new System.EventHandler(this.button_Flights_Click);
+            // 
+            // button_Clients
+            // 
+            this.button_Clients.Location = new System.Drawing.Point(295, 39);
+            this.button_Clients.Name = "button_Clients";
+            this.button_Clients.Size = new System.Drawing.Size(75, 23);
+            this.button_Clients.TabIndex = 54;
+            this.button_Clients.Text = "Clients";
+            this.button_Clients.UseVisualStyleBackColor = true;
+            this.button_Clients.Click += new System.EventHandler(this.button_Clients_Click);
             // 
             // SalesMagazineFormAlternative
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 231);
+            this.ClientSize = new System.Drawing.Size(381, 231);
+            this.Controls.Add(this.button_Report);
+            this.Controls.Add(this.button_Flights);
+            this.Controls.Add(this.button_Clients);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(idClientLabel);
@@ -461,5 +499,8 @@ namespace FlightManager
         private FM_DataDataSetTableAdapters.FlightsTableAdapter flightsTableAdapter;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource flightsBindingSource;
+        private System.Windows.Forms.Button button_Report;
+        private System.Windows.Forms.Button button_Flights;
+        private System.Windows.Forms.Button button_Clients;
     }
 }
