@@ -705,8 +705,6 @@ namespace FlightManager {
             
             private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnIsDeleted;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public AirportsDataTable() {
@@ -766,14 +764,6 @@ namespace FlightManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IsDeletedColumn {
-                get {
-                    return this.columnIsDeleted;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -809,13 +799,12 @@ namespace FlightManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AirportsRow AddAirportsRow(string IATA, string Name, bool IsDeleted) {
+            public AirportsRow AddAirportsRow(string IATA, string Name) {
                 AirportsRow rowAirportsRow = ((AirportsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         IATA,
-                        Name,
-                        IsDeleted};
+                        Name};
                 rowAirportsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAirportsRow);
                 return rowAirportsRow;
@@ -848,7 +837,6 @@ namespace FlightManager {
                 this.columnId = base.Columns["Id"];
                 this.columnIATA = base.Columns["IATA"];
                 this.columnName = base.Columns["Name"];
-                this.columnIsDeleted = base.Columns["IsDeleted"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -860,8 +848,6 @@ namespace FlightManager {
                 base.Columns.Add(this.columnIATA);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
-                this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsDeleted);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -874,7 +860,6 @@ namespace FlightManager {
                 this.columnIATA.MaxLength = 3;
                 this.columnName.AllowDBNull = false;
                 this.columnName.MaxLength = 50;
-                this.columnIsDeleted.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1652,8 +1637,6 @@ namespace FlightManager {
             
             private global::System.Data.DataColumn columnNumOfSeats;
             
-            private global::System.Data.DataColumn columnIsDeleted;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PlanesDataTable() {
@@ -1713,14 +1696,6 @@ namespace FlightManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IsDeletedColumn {
-                get {
-                    return this.columnIsDeleted;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1756,13 +1731,12 @@ namespace FlightManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PlanesRow AddPlanesRow(string Model, int NumOfSeats, bool IsDeleted) {
+            public PlanesRow AddPlanesRow(string Model, int NumOfSeats) {
                 PlanesRow rowPlanesRow = ((PlanesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Model,
-                        NumOfSeats,
-                        IsDeleted};
+                        NumOfSeats};
                 rowPlanesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPlanesRow);
                 return rowPlanesRow;
@@ -1795,7 +1769,6 @@ namespace FlightManager {
                 this.columnId = base.Columns["Id"];
                 this.columnModel = base.Columns["Model"];
                 this.columnNumOfSeats = base.Columns["NumOfSeats"];
-                this.columnIsDeleted = base.Columns["IsDeleted"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1807,8 +1780,6 @@ namespace FlightManager {
                 base.Columns.Add(this.columnModel);
                 this.columnNumOfSeats = new global::System.Data.DataColumn("NumOfSeats", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumOfSeats);
-                this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsDeleted);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1820,7 +1791,6 @@ namespace FlightManager {
                 this.columnModel.AllowDBNull = false;
                 this.columnModel.MaxLength = 15;
                 this.columnNumOfSeats.AllowDBNull = false;
-                this.columnIsDeleted.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4547,17 +4517,6 @@ namespace FlightManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDeleted {
-                get {
-                    return ((bool)(this[this.tableAirports.IsDeletedColumn]));
-                }
-                set {
-                    this[this.tableAirports.IsDeletedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FlightsRow[] GetFlightsRowsByFK__Flights__IdAirpo__6383C8BA() {
                 if ((this.Table.ChildRelations["FK__Flights__IdAirpo__6383C8BA"] == null)) {
                     return new FlightsRow[0];
@@ -4858,17 +4817,6 @@ namespace FlightManager {
                 }
                 set {
                     this[this.tablePlanes.NumOfSeatsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDeleted {
-                get {
-                    return ((bool)(this[this.tablePlanes.IsDeletedColumn]));
-                }
-                set {
-                    this[this.tablePlanes.IsDeletedColumn] = value;
                 }
             }
             
@@ -6139,38 +6087,33 @@ namespace FlightManager.FM_DataDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("IATA", "IATA");
             tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("IsDeleted", "IsDeleted");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Airports] WHERE (([Id] = @Original_Id) AND ([IATA] = @Original" +
-                "_IATA) AND ([Name] = @Original_Name) AND ([IsDeleted] = @Original_IsDeleted))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Airports] WHERE (([Id] = @Original_Id) AND ([IATA] = @Original_IATA)" +
+                " AND ([Name] = @Original_Name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IATA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Airports] ([IATA], [Name], [IsDeleted]) VALUES (@IATA, @Name, " +
-                "@IsDeleted);\r\nSELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = SCOPE_I" +
-                "DENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Airports] ([IATA], [Name]) VALUES (@IATA, @Name);\r\nSELECT Id, IATA, " +
+                "Name FROM Airports WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IATA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Airports] SET [IATA] = @IATA, [Name] = @Name, [IsDeleted] = @IsDeleted WHERE (([Id] = @Original_Id) AND ([IATA] = @Original_IATA) AND ([Name] = @Original_Name) AND ([IsDeleted] = @Original_IsDeleted));
-SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Airports] SET [IATA] = @IATA, [Name] = @Name WHERE (([Id] = @Original_Id)" +
+                " AND ([IATA] = @Original_IATA) AND ([Name] = @Original_Name));\r\nSELECT Id, IATA," +
+                " Name FROM Airports WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IATA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IATA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -6187,7 +6130,7 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, IATA, Name, IsDeleted FROM dbo.Airports";
+            this._commandCollection[0].CommandText = "SELECT Id, IATA, Name FROM Airports";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6248,7 +6191,7 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_IATA, string Original_Name, bool Original_IsDeleted) {
+        public virtual int Delete(int Original_Id, string Original_IATA, string Original_Name) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_IATA == null)) {
                 throw new global::System.ArgumentNullException("Original_IATA");
@@ -6262,7 +6205,6 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Name));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_IsDeleted));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6283,7 +6225,7 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string IATA, string Name, bool IsDeleted) {
+        public virtual int Insert(string IATA, string Name) {
             if ((IATA == null)) {
                 throw new global::System.ArgumentNullException("IATA");
             }
@@ -6296,7 +6238,6 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(IsDeleted));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6317,7 +6258,7 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string IATA, string Name, bool IsDeleted, int Original_Id, string Original_IATA, string Original_Name, bool Original_IsDeleted, int Id) {
+        public virtual int Update(string IATA, string Name, int Original_Id, string Original_IATA, string Original_Name, int Id) {
             if ((IATA == null)) {
                 throw new global::System.ArgumentNullException("IATA");
             }
@@ -6330,22 +6271,20 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(IsDeleted));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
             if ((Original_IATA == null)) {
                 throw new global::System.ArgumentNullException("Original_IATA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_IATA));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_IATA));
             }
             if ((Original_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Name));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Original_IsDeleted));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6366,8 +6305,8 @@ SELECT Id, IATA, Name, IsDeleted FROM Airports WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string IATA, string Name, bool IsDeleted, int Original_Id, string Original_IATA, string Original_Name, bool Original_IsDeleted) {
-            return this.Update(IATA, Name, IsDeleted, Original_Id, Original_IATA, Original_Name, Original_IsDeleted, Original_Id);
+        public virtual int Update(string IATA, string Name, int Original_Id, string Original_IATA, string Original_Name) {
+            return this.Update(IATA, Name, Original_Id, Original_IATA, Original_Name, Original_Id);
         }
     }
     
@@ -7274,39 +7213,33 @@ SELECT Id, IdAirportFrom, IdAirportTo, IdPlane, Price FROM Flights WHERE (Id = @
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Model", "Model");
             tableMapping.ColumnMappings.Add("NumOfSeats", "NumOfSeats");
-            tableMapping.ColumnMappings.Add("IsDeleted", "IsDeleted");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Planes] WHERE (([Id] = @Original_Id) AND ([Model] = @Original_" +
-                "Model) AND ([NumOfSeats] = @Original_NumOfSeats) AND ([IsDeleted] = @Original_Is" +
-                "Deleted))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Planes] WHERE (([Id] = @Original_Id) AND ([Model] = @Original_Model)" +
+                " AND ([NumOfSeats] = @Original_NumOfSeats))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumOfSeats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Planes] ([Model], [NumOfSeats], [IsDeleted]) VALUES (@Model, @" +
-                "NumOfSeats, @IsDeleted);\r\nSELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WH" +
-                "ERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Planes] ([Model], [NumOfSeats]) VALUES (@Model, @NumOfSeats);\r\nSELEC" +
+                "T Id, Model, NumOfSeats FROM Planes WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumOfSeats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Planes] SET [Model] = @Model, [NumOfSeats] = @NumOfSeats, [IsDeleted] = @IsDeleted WHERE (([Id] = @Original_Id) AND ([Model] = @Original_Model) AND ([NumOfSeats] = @Original_NumOfSeats) AND ([IsDeleted] = @Original_IsDeleted));
-SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Planes] SET [Model] = @Model, [NumOfSeats] = @NumOfSeats WHERE (([Id] = @" +
+                "Original_Id) AND ([Model] = @Original_Model) AND ([NumOfSeats] = @Original_NumOf" +
+                "Seats));\r\nSELECT Id, Model, NumOfSeats FROM Planes WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumOfSeats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumOfSeats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7323,7 +7256,7 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Model, NumOfSeats, IsDeleted FROM dbo.Planes";
+            this._commandCollection[0].CommandText = "SELECT Id, Model, NumOfSeats FROM Planes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7384,7 +7317,7 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Model, int Original_NumOfSeats, bool Original_IsDeleted) {
+        public virtual int Delete(int Original_Id, string Original_Model, int Original_NumOfSeats) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Model == null)) {
                 throw new global::System.ArgumentNullException("Original_Model");
@@ -7393,7 +7326,6 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Model));
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_NumOfSeats));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_IsDeleted));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7414,7 +7346,7 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Model, int NumOfSeats, bool IsDeleted) {
+        public virtual int Insert(string Model, int NumOfSeats) {
             if ((Model == null)) {
                 throw new global::System.ArgumentNullException("Model");
             }
@@ -7422,7 +7354,6 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Model));
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(NumOfSeats));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(IsDeleted));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7443,7 +7374,7 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Model, int NumOfSeats, bool IsDeleted, int Original_Id, string Original_Model, int Original_NumOfSeats, bool Original_IsDeleted, int Id) {
+        public virtual int Update(string Model, int NumOfSeats, int Original_Id, string Original_Model, int Original_NumOfSeats, int Id) {
             if ((Model == null)) {
                 throw new global::System.ArgumentNullException("Model");
             }
@@ -7451,17 +7382,15 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Model));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(NumOfSeats));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(IsDeleted));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
             if ((Original_Model == null)) {
                 throw new global::System.ArgumentNullException("Original_Model");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Model));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Model));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_NumOfSeats));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Original_IsDeleted));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_NumOfSeats));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7482,8 +7411,8 @@ SELECT Id, Model, NumOfSeats, IsDeleted FROM Planes WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Model, int NumOfSeats, bool IsDeleted, int Original_Id, string Original_Model, int Original_NumOfSeats, bool Original_IsDeleted) {
-            return this.Update(Model, NumOfSeats, IsDeleted, Original_Id, Original_Model, Original_NumOfSeats, Original_IsDeleted, Original_Id);
+        public virtual int Update(string Model, int NumOfSeats, int Original_Id, string Original_Model, int Original_NumOfSeats) {
+            return this.Update(Model, NumOfSeats, Original_Id, Original_Model, Original_NumOfSeats, Original_Id);
         }
     }
     

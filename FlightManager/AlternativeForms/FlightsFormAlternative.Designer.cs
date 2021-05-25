@@ -351,6 +351,7 @@ namespace FlightManager
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdAirportFrom", true));
             this.comboBox1.DataSource = this.airportsBindingSource;
             this.comboBox1.DisplayMember = "IATA";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(96, 58);
             this.comboBox1.Name = "comboBox1";
@@ -368,6 +369,7 @@ namespace FlightManager
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdAirportTo", true));
             this.comboBox2.DataSource = this.airportsBindingSource1;
             this.comboBox2.DisplayMember = "IATA";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(96, 84);
             this.comboBox2.Name = "comboBox2";
@@ -385,6 +387,7 @@ namespace FlightManager
             this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightsBindingSource, "IdPlane", true));
             this.comboBox3.DataSource = this.planesBindingSource;
             this.comboBox3.DisplayMember = "Model";
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(96, 110);
             this.comboBox3.Name = "comboBox3";

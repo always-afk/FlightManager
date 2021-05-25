@@ -366,6 +366,7 @@ namespace FlightManager
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salesMagazineBindingSource, "IdClient", true));
             this.comboBox1.DataSource = this.clientsBindingSource;
             this.comboBox1.DisplayMember = "PassportId";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(89, 36);
             this.comboBox1.Name = "comboBox1";
@@ -384,6 +385,7 @@ namespace FlightManager
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salesMagazineBindingSource, "IdFlight", true));
             this.comboBox2.DataSource = this.flightsBindingSource;
             this.comboBox2.DisplayMember = "Id";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(89, 62);
             this.comboBox2.Name = "comboBox2";

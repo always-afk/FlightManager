@@ -32,5 +32,12 @@ namespace FlightManager
 
         }
 
+        private void airportsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.airportsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.fM_DataDataSet);
+
+        }
     }
 }
